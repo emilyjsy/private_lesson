@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025년 고2 10월 모의고사 영어 — 과외 자료 (18-32번)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #181c27;
+    --card: #1e2235;
+    --border: #2a3050;
+    --accent: #4f8aff;
+    --accent2: #7c5cfc;
+    --green: #2dd4a0;
+    --red: #ff5f72;
+    --yellow: #f5c842;
+    --text: #e8eaf6;
+    --muted: #8891b4;
+    --mono: 'DM Mono', monospace;
+    --serif: 'Noto Serif KR', serif;
+    --sans: 'Outfit', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  /* TOP HEADER */
+  .site-header {
+    background: linear-gradient(135deg, #1a1f35 0%, #0f1117 60%);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-header h1 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .site-header .meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+    font-family: var(--mono);
+  }
+  .badge-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .badge {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+  .badge.warn { border-color: var(--yellow); color: var(--yellow); }
+
+  /* LAYOUT */
+  .container { max-width: 940px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* NOTICE */
+  .notice {
+    margin: 36px 0 0;
+    padding: 16px 20px;
+    border: 1px solid var(--yellow);
+    border-radius: 8px;
+    background: rgba(245,200,66,0.06);
+    font-size: 0.85rem;
+    color: var(--yellow);
+  }
+
+  /* QUESTION BLOCK */
+  .q-block {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .q-header {
+    background: var(--surface);
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .q-num {
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--accent);
+    min-width: 36px;
+  }
+  .q-type {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 10px;
+  }
+  .q-title {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .q-body { padding: 28px; }
+
+  /* PASSAGE */
+  .passage-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 26px;
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    line-height: 2;
+    color: #d0d5f0;
+    margin-bottom: 24px;
+  }
+  .passage-box em {
+    font-style: italic;
+  }
+  .underline { text-decoration: underline; text-decoration-color: var(--yellow); }
+
+  /* TRANSLATION */
+  .translation-box {
+    background: rgba(79,138,255,0.06);
+    border: 1px solid rgba(79,138,255,0.25);
+    border-radius: 8px;
+    padding: 18px 22px;
+    font-size: 0.875rem;
+    color: #a8b8e8;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+  .translation-box strong { color: var(--accent); }
+
+  /* SECTION LABELS */
+  .section { margin-top: 28px; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ANSWER */
+  .answer-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: rgba(45,212,160,0.08);
+    border: 1px solid rgba(45,212,160,0.3);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .answer-num {
+    font-size: 1.5rem;
+    color: var(--green);
+    font-weight: 700;
+    font-family: var(--mono);
+    min-width: 28px;
+  }
+  .answer-text { color: var(--text); font-size: 0.92rem; }
+  .answer-text .choice-ko { color: var(--green); font-weight: 600; }
+
+  /* EVIDENCE */
+  .evidence-box {
+    background: var(--card);
+    border-left: 3px solid var(--green);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    font-family: var(--serif);
+    font-size: 0.88rem;
+    color: #c5d0f0;
+    margin-bottom: 8px;
+    line-height: 1.9;
+  }
+  .evidence-tag {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  /* WRONG CHOICES */
+  .wrong-grid { display: flex; flex-direction: column; gap: 8px; }
+  .wrong-item {
+    background: rgba(255,95,114,0.06);
+    border: 1px solid rgba(255,95,114,0.2);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+  }
+  .wrong-num { color: var(--red); font-family: var(--mono); font-weight: 600; margin-right: 8px; }
+  .wrong-reason { color: #c0c8e0; }
+  .wrong-item.correct-mark {
+    border-color: rgba(45,212,160,0.3);
+    background: rgba(45,212,160,0.05);
+  }
+  .wrong-item.correct-mark .wrong-num { color: var(--green); }
+
+  /* TOPIC SENTENCE */
+  .topic-box {
+    background: rgba(124,92,252,0.08);
+    border: 1px solid rgba(124,92,252,0.3);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    color: #c8bfff;
+    line-height: 1.9;
+  }
+
+  /* FLOW */
+  .flow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .flow-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.875rem;
+    color: var(--text);
+  }
+  .flow-icon {
+    color: var(--accent2);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    padding-top: 2px;
+    min-width: 22px;
+  }
+
+  /* GRAMMAR */
+  .grammar-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .grammar-title {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+  .grammar-eng {
+    font-family: var(--serif);
+    font-size: 0.88rem;
+    color: #d8e0ff;
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+  .grammar-ko { font-size: 0.825rem; color: var(--muted); }
+
+  /* VOCAB */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .vocab-word {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--accent);
+    min-width: 80px;
+  }
+  .vocab-meaning { font-size: 0.82rem; color: var(--muted); }
+
+  /* DIVIDER */
+  hr { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+  /* MISSING */
+  .missing-block {
+    margin-top: 48px;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  .missing-block .nums { font-family: var(--mono); font-size: 1.2rem; color: var(--yellow); margin-bottom: 10px; }
+
+  /* Scroll-to-top */
+  .toc {
+    margin: 32px 0;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .toc-title { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .toc-link {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 12px;
+    transition: background 0.2s;
+  }
+  .toc-link:hover { background: var(--border); }
+  .toc-link.missing { color: var(--yellow); }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <h1>2025년 고2 10월 모의고사 영어 — 과외 참고 자료</h1>
+  <div class="meta">18번 ~ 32번 · 독해 파트</div>
+  <div class="badge-row">
+    <span class="badge">정답 + 근거</span>
+    <span class="badge">오답 분석</span>
+    <span class="badge">주제문</span>
+    <span class="badge">글의 흐름</span>
+    <span class="badge">핵심 문법</span>
+    <span class="badge">어려운 단어</span>
+    <span class="badge warn">⚠ Q25~28 지문 없음 (PDF 누락)</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="notice">
+    ⚠ 업로드된 문제 PDF에 25~28번 지문이 포함된 페이지(4페이지)가 없습니다. 해당 문항은 아래 별도 표시합니다.
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">문항 목차</div>
+    <div class="toc-links">
+      <a class="toc-link" href="#q18">18번</a>
+      <a class="toc-link" href="#q19">19번</a>
+      <a class="toc-link" href="#q20">20번</a>
+      <a class="toc-link" href="#q21">21번</a>
+      <a class="toc-link" href="#q22">22번</a>
+      <a class="toc-link" href="#q23">23번</a>
+      <a class="toc-link" href="#q24">24번</a>
+      <a class="toc-link missing" href="#q25-28">25~28번 (누락)</a>
+      <a class="toc-link" href="#q29">29번</a>
+      <a class="toc-link" href="#q30">30번</a>
+      <a class="toc-link" href="#q31">31번</a>
+      <a class="toc-link" href="#q32">32번</a>
+    </div>
+  </div>
+
+  <!-- ========================= Q18 ========================= -->
+  <div class="q-block" id="q18">
+    <div class="q-header">
+      <div class="q-num">18</div>
+      <div class="q-type">글의 목적</div>
+      <div class="q-title">다음 글의 목적으로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        To the Customer Service Team,<br><br>
+        About a month ago, my wife and I purchased a set of bookshelves from your store. I was truly excited to find furniture that perfectly matched our new home. When we bought the bookshelves, the manager said it would take four weeks for delivery, which was last weekend. We had set our plans to ensure someone would be available to receive the delivery; however, no one came with the bookshelves that day. This delay has caused us considerable inconvenience. Therefore, <strong>please provide a clear and specific delivery date.</strong> We expect this issue to be addressed promptly, so that we can reorganize our schedule to receive the delivery without any confusion.
+      </div>
+
+      <div class="translation-box">
+        고객 서비스팀 귀중,<br><br>
+        약 한 달 전, 저와 제 아내는 귀 매장에서 책장 세트를 구입했습니다. 새 집에 완벽하게 어울리는 가구를 발견해서 정말 기뻤습니다. 책장을 구입할 당시, 매니저는 배송에 4주가 걸린다고 했으며, 그 날짜가 지난 주말이었습니다. 배송을 받을 사람이 있도록 계획을 세웠으나, 그날 책장을 가져오는 사람이 아무도 없었습니다. 이 지연은 저희에게 상당한 불편을 초래했습니다. 따라서 <strong>명확하고 구체적인 배송 날짜를 알려주시기 바랍니다.</strong> 저희가 혼란 없이 배송을 받을 수 있도록 이 문제를 신속하게 처리해 주시기를 기대합니다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">책장 배송의 정확한 날짜를 요청하려고</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거 — 본문 핵심 문장</div>
+        <div class="evidence-box">
+          "Therefore, <strong>please provide a clear and specific delivery date.</strong>"<br>
+          → 글 전체의 요청이 이 한 문장에 집약됨. 배송이 약속일에 이루어지지 않았으니, 새로운 정확한 날짜를 달라는 것이 편지의 목적.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">주소 변경 — 본문에 배송 주소 변경 언급 없음</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">②</span><span class="wrong-reason correct" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">반품·환불 — 반품이나 환불 요청 없음. 배송을 기다리고 있는 상황</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">배달원 불친절 — 배달 자체가 오지 않은 것이지, 배달원의 태도 문제가 아님</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">감사 표현 — 일정 변경에 감사하는 것이 아니라 항의·요청하는 글</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"Therefore, please provide a clear and specific delivery date."<br><span style="color:var(--muted);font-size:0.82rem">— 글 전체의 요청이 집약된 핵심 문장. 앞 내용은 모두 이 문장을 위한 배경 설명.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>책장 구입 + 기대감 서술 (배경)</div>
+          <div class="flow-item"><div class="flow-icon">02</div>4주 후 배송 약속 (문제 상황 설정)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>약속일에 배송이 오지 않음 (문제 발생)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>불편함 언급 → 핵심 요청: 명확한 날짜 제공 (요청)</div>
+          <div class="flow-item"><div class="flow-icon">05</div>신속한 처리 기대 (마무리)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">관계대명사 계속적 용법</div>
+          <div class="grammar-eng">"...four weeks for delivery, <u>which was last weekend</u>"</div>
+          <div class="grammar-ko">쉼표 + which → 앞 명사(delivery)를 부연 설명. "그것(배송)이 바로 지난 주말이었다"는 뜻.</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">to부정사 부사적 용법 (목적)</div>
+          <div class="grammar-eng">"We had set our plans <u>to ensure</u> someone would be available..."</div>
+          <div class="grammar-ko">"~하기 위해 계획을 세웠다" → 목적을 나타내는 to부정사</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">수동태 to부정사</div>
+          <div class="grammar-eng">"We expect this issue <u>to be addressed</u> promptly"</div>
+          <div class="grammar-ko">expect + 목적어 + to-v 구조. "이 문제가 처리되기를 기대한다" — 주어(issue)가 addressed되는 수동 관계.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">considerable</div><div class="vocab-meaning">상당한, 꽤 많은</div></div>
+          <div class="vocab-item"><div class="vocab-word">inconvenience</div><div class="vocab-meaning">불편함</div></div>
+          <div class="vocab-item"><div class="vocab-word">promptly</div><div class="vocab-meaning">즉시, 신속하게</div></div>
+          <div class="vocab-item"><div class="vocab-word">reorganize</div><div class="vocab-meaning">재조정하다, 다시 계획하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">confusion</div><div class="vocab-meaning">혼란, 혼선</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q19 ========================= -->
+  <div class="q-block" id="q19">
+    <div class="q-header">
+      <div class="q-num">19</div>
+      <div class="q-type">심경 변화</div>
+      <div class="q-title">다음 글에 드러난 'I'의 심경 변화로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        I was heading in the direction of a forest road that I knew would take me home. But almost as though someone had switched off all the lights I was suddenly in a black forest with no light of any kind. Feeling lost, I stumbled. I fell. I tore my clothes and injured myself falling down a hill. <em>In desperation I stopped and leaned against a tree. I have no idea where I am now. Will anyone even notice that I'm gone?</em> It was then that a faint aroma drifted through the darkness: the scent of cooking. I stumbled towards it, and soon, a faint, yellowish light glowed through the trees. It was Uncle Krull's cabin and I could see him through the window! <strong>Thankful beyond words, I knew I could finally ask for help. My hardship was over.</strong>
+      </div>
+
+      <div class="translation-box">
+        나는 집으로 데려다 줄 것이라고 알고 있는 숲길 방향으로 가고 있었다. 그런데 마치 누군가가 모든 불을 꺼버린 것처럼, 나는 갑자기 어떤 종류의 빛도 없는 캄캄한 숲 속에 있었다. 길을 잃은 느낌이 들어 나는 비틀거렸다. 나는 넘어졌다. 언덕을 굴러 떨어지며 옷이 찢기고 다쳤다. <em>절망에 빠진 나는 멈추어 나무에 기댔다. 나는 지금 내가 어디에 있는지 전혀 모른다. 내가 없어진 것을 누군가 알아채기나 할까?</em> 바로 그때 희미한 향기가 어둠 속을 떠다녔다: 음식 요리 냄새였다. 나는 그것을 향해 비틀거리며 갔고, 곧 희미한 노르스름한 빛이 나무들 사이로 빛났다. 그것은 Krull 삼촌의 오두막이었고 창문을 통해 그를 볼 수 있었다! <strong>말로 표현할 수 없을 만큼 감사하며, 나는 마침내 도움을 요청할 수 있다는 것을 알았다. 나의 고난은 끝났다.</strong>
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">③</div>
+          <div class="answer-text"><span class="choice-ko">hopeless → relieved (절망적인 → 안도한)</span></div>
+        </div>
+        <div class="evidence-tag">전반부 — hopeless의 근거</div>
+        <div class="evidence-box">
+          "I have no idea where I am now. Will anyone even notice that I'm gone?"<br>
+          → 자신의 위치를 모르고 아무도 못 찾을까봐 두려워하는 절망적 심경
+        </div>
+        <div class="evidence-tag">후반부 — relieved의 근거</div>
+        <div class="evidence-box">
+          "Thankful beyond words, I knew I could finally ask for help. My hardship was over."<br>
+          → 오두막을 발견하고 도움을 받을 수 있다는 안도감
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">curious → amazed: 호기심·놀라움은 나타나지 않음. 생존 상황에서 느끼는 감정이 아님.</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span class="wrong-reason">bored → satisfied: 지루함은 전혀 없음. 위기 상황임.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">③</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">frustrated → regretful: 후회(regretful)의 감정은 나타나지 않음. 끝에서 감사·안도감.</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">indifferent → grateful: 처음부터 무관심한 게 아님. 위기 → 안도의 흐름.</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>집으로 향하는 숲길 → 갑자기 암흑 (위기 발생)</div>
+          <div class="flow-item"><div class="flow-icon">02</div>넘어지고 다침 → 절망 고조 ("I have no idea...")</div>
+          <div class="flow-item"><div class="flow-icon">03</div>음식 향기 → 전환점 (희망의 실마리)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>빛 발견 → 삼촌의 오두막 확인 (구원)</div>
+          <div class="flow-item"><div class="flow-icon">05</div>감사·안도 ("My hardship was over.")</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">가정법 과거완료 (as though)</div>
+          <div class="grammar-eng">"almost as though someone <u>had switched off</u> all the lights"</div>
+          <div class="grammar-ko">as though + 가정법 과거완료 → 실제로 그런 것은 아니지만, 마치 ~한 것처럼 (과거 사실 반대)</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">분사구문 (동시 상황)</div>
+          <div class="grammar-eng">"<u>Feeling lost</u>, I stumbled." / "<u>Thankful beyond words</u>, I knew..."</div>
+          <div class="grammar-ko">주어와 동일한 주어가 생략된 분사구문. 동시에 일어나는 상황·감정 묘사.</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">강조 구문 It ~ that</div>
+          <div class="grammar-eng">"It was <u>then</u> that a faint aroma drifted through the darkness"</div>
+          <div class="grammar-ko">「It is/was + 강조어구 + that」 — "바로 그때 향기가 흘러왔다" (시간 부사 then을 강조)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">stumble</div><div class="vocab-meaning">비틀거리다, 발을 헛디디다</div></div>
+          <div class="vocab-item"><div class="vocab-word">desperation</div><div class="vocab-meaning">절망, 자포자기</div></div>
+          <div class="vocab-item"><div class="vocab-word">faint</div><div class="vocab-meaning">희미한, 약한</div></div>
+          <div class="vocab-item"><div class="vocab-word">aroma</div><div class="vocab-meaning">향기, 냄새</div></div>
+          <div class="vocab-item"><div class="vocab-word">drift</div><div class="vocab-meaning">떠다니다, 흘러가다</div></div>
+          <div class="vocab-item"><div class="vocab-word">glow</div><div class="vocab-meaning">빛나다, 환하게 타오르다</div></div>
+          <div class="vocab-item"><div class="vocab-word">hardship</div><div class="vocab-meaning">고난, 역경</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q20 ========================= -->
+  <div class="q-block" id="q20">
+    <div class="q-header">
+      <div class="q-num">20</div>
+      <div class="q-type">필자의 주장</div>
+      <div class="q-title">다음 글에서 필자가 주장하는 바로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        When you are working in healthcare, it is important to develop a solid professional relationship with your patients. By establishing realistic self-boundaries, you can protect that relationship. It is important to keep the focus on the patient. When working with patients who are seen frequently, it is easy to start to think of them as friends. With a friend, you are likely to share personal information that is not appropriate with a patient. Patients may feel that they cannot share important health-related information because you are their friend, and it would be embarrassing to share that information. Self-boundaries can also be thought of as professional boundaries. <strong>You need to treat patients with respect and keep the relationship professional.</strong> Be friendly to patients and always keep the focus on the patient.
+      </div>
+
+      <div class="translation-box">
+        의료 분야에서 일할 때, 환자와 견고한 직업적 관계를 발전시키는 것이 중요하다. 현실적인 자기 경계를 설정함으로써 그 관계를 보호할 수 있다. 환자에게 집중하는 것이 중요하다. 자주 보는 환자와 일할 때, 그들을 친구처럼 생각하기 시작하기 쉽다. 친구와 함께라면, 환자에게는 적절하지 않은 개인 정보를 공유할 가능성이 높다. 환자들은 당신이 친구이기 때문에 중요한 건강 관련 정보를 공유하지 못할 수도 있는데, 그 정보를 공유하는 것이 당혹스러울 것이기 때문이다. 자기 경계는 직업적 경계로도 생각할 수 있다. <strong>환자를 존중하며 직업적인 관계를 유지해야 한다.</strong> 환자에게 친근하되, 항상 환자에게 집중하라.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">의료 종사자는 환자를 존중하며 직업적인 경계를 유지해야 한다.</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          "Self-boundaries can also be thought of as professional boundaries. <strong>You need to treat patients with respect and keep the relationship professional.</strong>"<br>
+          → 글 전체의 핵심 주장이 이 두 문장에 집약됨.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">진단 결과를 숨김없이 알려야 — 진단 공개에 대한 내용 없음</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">②</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">객관적 데이터에 기반한 진단 — 데이터·진단 방법론 언급 없음</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">환자가 의료진 영역 침범하지 않아야 — 방향 반대. 이 글은 의료인에게 하는 말.</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">환자 개인 정보를 비밀로 — 부분적 내용이지만 글의 핵심 주장은 '경계 유지'임</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"You need to treat patients with respect and keep the relationship professional."<br><span style="color:var(--muted);font-size:0.82rem">첫 문장도 주제 관련: "it is important to develop a solid professional relationship"</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>의료인은 환자와 직업적 관계 발전이 중요 (주장 제시)</div>
+          <div class="flow-item"><div class="flow-icon">02</div>자기 경계 설정 → 관계 보호 (방법)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>자주 보는 환자 → 친구처럼 느끼기 쉬움 (문제 상황)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>친구처럼 대하면 → 환자가 건강 정보 공유 안 함 (결과적 문제)</div>
+          <div class="flow-item"><div class="flow-icon">05</div>직업적 경계 = 전문적 경계 → 존중 + 집중 (결론)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">가주어 it + 진주어 to-v</div>
+          <div class="grammar-eng">"<u>It</u> is important <u>to develop</u> a solid professional relationship"</div>
+          <div class="grammar-ko">진짜 주어(to develop)가 길어서 it을 가주어로 쓴 구조. 수능 단골 문법.</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">By + 동명사 (수단)</div>
+          <div class="grammar-eng">"<u>By establishing</u> realistic self-boundaries, you can protect that relationship."</div>
+          <div class="grammar-ko">"~함으로써" — 방법·수단을 나타내는 전치사 by + 동명사</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">establish</div><div class="vocab-meaning">설정하다, 확립하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">boundary</div><div class="vocab-meaning">경계, 한계</div></div>
+          <div class="vocab-item"><div class="vocab-word">appropriate</div><div class="vocab-meaning">적절한</div></div>
+          <div class="vocab-item"><div class="vocab-word">embarrassing</div><div class="vocab-meaning">당혹스러운</div></div>
+          <div class="vocab-item"><div class="vocab-word">professional</div><div class="vocab-meaning">직업적인, 전문적인</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q21 ========================= -->
+  <div class="q-block" id="q21">
+    <div class="q-header">
+      <div class="q-num">21</div>
+      <div class="q-type">밑줄 친 부분의 의미 [3점]</div>
+      <div class="q-title">밑줄 친 <em>"chemistry, at least in your mouth, could be destiny"</em>가 의미하는 바로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Coat a fresh, wet swab in salt, and gently touch various spots on your tongue, recording where your taste seems strongest. Then, gargle with water to thoroughly clean your tongue, use a swab coated with sugar on the same spots, and record those results. Gargle again, and then swab with lemon juice. After a final gargle, try coffee. Compare your reactions with your friends'. Your taste pattern may reveal more than just taste preferences. Recent studies suggest links between taster status and behavioral disorders. For example, "non-tasters" tend to have a higher incidence of alcoholism, perhaps because liquor seems less bitter to them. Conversely, "super-tasters" may avoid nutritious but mildly bitter foods such as broccoli, thus depriving themselves of a balanced diet. So, although taste is not nearly as glamorous as vision, hearing, or even touch, it makes sense for you to pay closer attention to it because <span class="underline">chemistry, at least in your mouth, could be destiny</span>.
+      </div>
+
+      <div class="translation-box">
+        신선하고 젖은 면봉을 소금에 묻히고 혀의 여러 부위를 살며시 터치하며 맛이 가장 강한 곳을 기록하라. 그다음 물로 가글하여 혀를 깨끗이 씻고, 같은 부위에 설탕을 묻힌 면봉을 사용한 후 결과를 기록하라. 다시 가글하고, 레몬즙으로 면봉질하라. 마지막 가글 후 커피를 시도하라. 친구들의 반응과 비교하라. 여러분의 미각 패턴은 단순한 미각 선호도 이상을 드러낼 수 있다. 최근 연구들은 미각자 상태와 행동 장애 사이의 연관성을 제시한다. 예를 들어, '비미각자'는 알코올 중독 발생률이 더 높은 경향이 있는데, 아마도 주류가 그들에게 덜 쓴맛으로 느껴지기 때문일 것이다. 반대로 '슈퍼 미각자'는 브로콜리와 같이 영양가 있지만 약간 쓴 음식을 피해 균형 잡힌 식단을 스스로 박탈할 수 있다. 따라서, 미각은 시각, 청각, 심지어 촉각만큼 인상적이지 않지만, <span style="text-decoration:underline;text-decoration-color:var(--yellow)">입 안의 화학적 반응이 곧 운명일 수 있기 때문에</span> 더 주의를 기울이는 것이 합리적이다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">밑줄 해석 포인트</div>
+        <div class="evidence-box">
+          • <strong>chemistry in your mouth</strong> = 입 안의 화학적 반응 = <strong>미각 민감도(taster status)</strong><br>
+          • <strong>destiny</strong> = 운명 = <strong>개인의 식습관·행동 결과를 결정짓는 것</strong><br>
+          → "미각의 예민함이 삶의 식습관 행동을 결정할 수 있다"
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">Differences in taste sensitivity can shape individual dietary behavior.<br>(미각 민감도의 차이가 개인의 식습관 행동을 형성할 수 있다.)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          "non-tasters → higher incidence of alcoholism" / "super-tasters → avoid nutritious bitter foods"<br>
+          → 미각 민감도 차이(chemistry)가 음주·식습관(dietary behavior)을 결정(destiny)함
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">Every part of tongue can sense all flavors — 혀 전체 미각 수용에 관한 내용 아님</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span class="wrong-reason">Physical condition influences taste — 신체 컨디션이 아닌 타고난 미각 민감도 문제</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">Nutritional benefits vary by personal traits — 영양소 자체의 효과 차이가 아님</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">④</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">Early exposure determines lifetime preference — 조기 노출 언급 없음</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>미각 실험 방법 소개 (소금→설탕→레몬→커피)</div>
+          <div class="flow-item"><div class="flow-icon">02</div>미각 패턴 → 단순 선호 이상의 정보 (전환)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>비미각자 → 알코올 중독 위험 (구체 사례 1)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>슈퍼미각자 → 쓴 채소 회피 → 불균형 식단 (구체 사례 2)</div>
+          <div class="flow-item"><div class="flow-icon">05</div>결론: 입 안의 화학 = 운명 → 미각에 주목할 필요</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">swab</div><div class="vocab-meaning">면봉</div></div>
+          <div class="vocab-item"><div class="vocab-word">gargle</div><div class="vocab-meaning">가글하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">incidence</div><div class="vocab-meaning">발생률</div></div>
+          <div class="vocab-item"><div class="vocab-word">alcoholism</div><div class="vocab-meaning">알코올 중독</div></div>
+          <div class="vocab-item"><div class="vocab-word">conversely</div><div class="vocab-meaning">반대로, 역으로</div></div>
+          <div class="vocab-item"><div class="vocab-word">nutritious</div><div class="vocab-meaning">영양가 있는</div></div>
+          <div class="vocab-item"><div class="vocab-word">deprive</div><div class="vocab-meaning">박탈하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">glamorous</div><div class="vocab-meaning">매력적인, 인상적인</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q22 ========================= -->
+  <div class="q-block" id="q22">
+    <div class="q-header">
+      <div class="q-num">22</div>
+      <div class="q-type">글의 요지</div>
+      <div class="q-title">다음 글의 요지로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Experiments testify to science's embrace of ignorance. Arguably the worst thing a scientist can do is to suppose they know what will happen in a given scenario without bothering to check. The rise of the experimental philosophy coincided with the liberation of curiosity as a valuable rather than a questionable attribute. For all that experimental science today is often assumed to be supported by a philosophical framework and an approved methodology ("state your hypothesis and then test it"), the fact is that, as philosopher of science Ian Hacking says, "One can conduct an experiment simply out of curiosity to see what will happen." Indeed, in the view of Charles Darwin's son, the astronomer George Darwin, <strong>once in a while one should do a completely crazy experiment, even if it is most likely to prove fruitless. You never know until you try.</strong>
+      </div>
+
+      <div class="translation-box">
+        실험들은 과학이 무지(모름)를 받아들인다는 것을 입증한다. 틀림없이 과학자가 할 수 있는 최악의 일은 확인하려는 노력 없이 주어진 상황에서 무슨 일이 일어날지 안다고 가정하는 것이다. 실험 철학의 부상은 호기심을 의심스러운 속성이 아닌 가치 있는 속성으로서 해방시키는 것과 동시에 일어났다. 오늘날 실험 과학은 철학적 틀과 승인된 방법론("가설을 세우고 검증하라")에 의해 지지된다고 가정되지만, 사실은 과학 철학자 Ian Hacking이 말하듯 "단순히 무슨 일이 일어나는지 보고 싶은 호기심에서 실험을 수행할 수 있다." 실제로, 천문학자 George Darwin의 견해에서는, <strong>때때로 완전히 엉뚱한 실험도 해야 하는데, 그것이 결과 없이 끝날 가능성이 가장 높더라도 그렇다. 해보기 전에는 알 수 없다.</strong>
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">①</div>
+          <div class="answer-text"><span class="choice-ko">단순한 호기심도 실험을 할 타당한 이유가 된다.</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          "One can conduct an experiment simply <strong>out of curiosity</strong> to see what will happen."<br>
+          "once in a while one should do a completely crazy experiment... <strong>You never know until you try.</strong>"
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item correct-mark"><span class="wrong-num">①</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span class="wrong-reason">입증된 이론에 근거한 가설 설정 — 오히려 반대. 이 글은 기존 틀을 벗어난 호기심 실험 권장</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">명확한 계획 없으면 손실 — 반대 입장. 글은 계획 없는 호기심 실험 긍정</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">결과 예측이 객관성 해침 — 부분적 관련이지만 글의 핵심 요지가 아님</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">복잡할수록 결과 예측 벗어남 — 실험 복잡성 얘기가 아님</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"One can conduct an experiment simply out of curiosity to see what will happen."<br><span style="color:var(--muted);font-size:0.82rem">→ Ian Hacking의 인용문이지만 필자가 가장 지지하는 문장. 마지막 "You never know until you try."도 핵심.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">For all that (양보)</div>
+          <div class="grammar-eng">"<u>For all that</u> experimental science today is often assumed to be..."</div>
+          <div class="grammar-ko">"~임에도 불구하고" — although/despite와 같은 양보의 의미</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">동격 that절</div>
+          <div class="grammar-eng">"the fact <u>is that</u>... 'One can conduct an experiment simply out of curiosity'"</div>
+          <div class="grammar-ko">the fact is that ~ : "사실은 ~이다" — that절이 fact의 내용을 설명</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">testify</div><div class="vocab-meaning">입증하다, 증언하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">arguably</div><div class="vocab-meaning">틀림없이, 아마도</div></div>
+          <div class="vocab-item"><div class="vocab-word">coincide with</div><div class="vocab-meaning">~와 동시에 일어나다</div></div>
+          <div class="vocab-item"><div class="vocab-word">liberation</div><div class="vocab-meaning">해방, 자유화</div></div>
+          <div class="vocab-item"><div class="vocab-word">methodology</div><div class="vocab-meaning">방법론</div></div>
+          <div class="vocab-item"><div class="vocab-word">fruitless</div><div class="vocab-meaning">결실 없는, 헛된</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q23 ========================= -->
+  <div class="q-block" id="q23">
+    <div class="q-header">
+      <div class="q-num">23</div>
+      <div class="q-type">글의 주제</div>
+      <div class="q-title">다음 글의 주제로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        <strong>We can discard or replace a scientific theory only if we have a better way of explaining the evidence that supports it.</strong> The theories of Newton and Einstein offer great examples. A vast body of evidence supports Newton's theory of gravity, but by the late nineteenth century scientists had begun to discover cases where its predictions did not perfectly match observations. These discrepancies were explained only when Einstein developed his general theory of relativity, which was able to match the observations. Still, the many successes of Newton's theory could not be ignored, and Einstein's theory would not have gained acceptance if it had not been able to explain these successes equally well. It did, and that is why we now view Einstein's theory as a broader theory of gravity than Newton's theory. Some scientists today are seeking a theory of gravity that will go beyond Einstein's. If any new theory ever gains acceptance, it will have to match all the successes of Einstein's theory as well as work in new realms where Einstein's theory does not.
+      </div>
+
+      <div class="translation-box">
+        <strong>우리는 어떤 과학 이론을 뒷받침하는 증거를 더 잘 설명하는 방법이 있을 때만 그 이론을 폐기하거나 대체할 수 있다.</strong> 뉴턴과 아인슈타인의 이론이 좋은 예다. 뉴턴의 중력 이론을 뒷받침하는 방대한 증거가 있지만, 19세기 말에 과학자들은 그 예측이 관측과 완벽히 일치하지 않는 사례들을 발견하기 시작했다. 이 불일치들은 아인슈타인이 일반 상대성 이론을 개발했을 때 비로소 설명되었는데, 이 이론은 관측과 일치할 수 있었다. 그럼에도 뉴턴 이론의 많은 성공을 무시할 수 없었고, 아인슈타인의 이론이 그 성공들을 똑같이 잘 설명할 수 없었다면 받아들여지지 않았을 것이다. 그것은 가능했고, 그래서 우리는 아인슈타인의 이론을 뉴턴의 이론보다 더 광범위한 중력 이론으로 본다. 오늘날 일부 과학자들은 아인슈타인을 뛰어넘는 중력 이론을 찾고 있다. 새 이론이 받아들여지려면, 아인슈타인 이론의 모든 성공을 일치시킴과 동시에 아인슈타인 이론이 작동하지 않는 새로운 영역에서도 작동해야 할 것이다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">how a new theory gains acceptance beyond an existing one<br>(기존 이론을 넘어 새 이론이 받아들여지는 방법)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          첫 문장: "We can discard or replace a theory only if we have a better way of explaining the evidence."<br>
+          마지막 문장: "If any new theory gains acceptance, it will have to match all the successes of Einstein's theory as well as work in new realms."<br>
+          → 전체 글이 '새 이론이 기존 이론을 대체하기 위한 조건'을 설명
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">danger of hasty acknowledgement — 성급한 수용의 위험성이 아님. 오히려 조건을 충족해야 수용 가능.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">②</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">difficulties understanding gravity — 중력 이해의 어려움이 주제가 아님</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">benefits of simplification — 이론 단순화 언급 없음</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">testing two theories in single experiment — 단일 실험으로 검증 얘기 없음</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"We can discard or replace a scientific theory only if we have a better way of explaining the evidence that supports it."<br><span style="color:var(--muted);font-size:0.82rem">→ 첫 문장이 주제문. 뒤에 나오는 뉴턴·아인슈타인 사례는 모두 이 주장을 뒷받침.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">가정법 과거완료</div>
+          <div class="grammar-eng">"Einstein's theory <u>would not have gained</u> acceptance if it <u>had not been able</u> to explain these successes equally well."</div>
+          <div class="grammar-ko">would have p.p. / if ~ had p.p. → 과거 사실의 반대 가정. "만약 설명할 수 없었다면, 받아들여지지 않았을 것이다."</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">관계부사 why</div>
+          <div class="grammar-eng">"that is <u>why</u> we now view Einstein's theory as a broader theory"</div>
+          <div class="grammar-ko">"그것이 바로 ~한 이유다" — that is why + 결과절</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">discard</div><div class="vocab-meaning">폐기하다, 버리다</div></div>
+          <div class="vocab-item"><div class="vocab-word">discrepancy</div><div class="vocab-meaning">불일치, 차이</div></div>
+          <div class="vocab-item"><div class="vocab-word">relativity</div><div class="vocab-meaning">상대성 (이론)</div></div>
+          <div class="vocab-item"><div class="vocab-word">realm</div><div class="vocab-meaning">영역, 분야</div></div>
+          <div class="vocab-item"><div class="vocab-word">acceptance</div><div class="vocab-meaning">수용, 받아들여짐</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q24 ========================= -->
+  <div class="q-block" id="q24">
+    <div class="q-header">
+      <div class="q-num">24</div>
+      <div class="q-type">글의 제목</div>
+      <div class="q-title">다음 글의 제목으로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Imagine pausing in the middle of a busy day, taking a moment to refresh your mind and recharge your energy. This power of a midday break is often underestimated. When you break away from routine, especially with activities designed to stimulate your brain, you prevent cognitive tiredness and enhance productivity for the rest of the day. Neurobic exercises ― simple yet effective ― are perfect for such breaks. They target different areas of your brain, keeping it agile and alert. These exercises create a mental oasis that refreshes and prepares you for the afternoon's challenges. This strategic pause is not just a break; it boosts your cognitive capabilities, ensuring your mind remains sharp and focused. Even briefly experimenting with neurobic exercises can work wonders for your cognitive state during lunch. <strong>Start with using your non-dominant hand for routine tasks like writing or eating. This simple switch challenges your brain, activating pathways that aren't typically engaged and promoting greater flexibility in thinking.</strong>
+      </div>
+
+      <div class="translation-box">
+        바쁜 하루 중간에 잠시 멈추어 마음을 새롭게 하고 에너지를 재충전하는 상상을 해보라. 이 점심 시간 휴식의 힘은 종종 과소평가된다. 일상에서 벗어날 때, 특히 뇌를 자극하도록 설계된 활동들로, 인지적 피로를 예방하고 나머지 하루의 생산성을 높인다. 뉴로빅 운동은 단순하면서도 효과적으로 그런 휴식에 완벽하다. 뇌의 다양한 영역을 목표로 하여 뇌를 기민하고 민첩하게 유지한다. 이 운동들은 오후의 도전에 대비하도록 정신을 새롭게 하는 정신적 오아시스를 만든다. 이 전략적 휴식은 단순한 쉬는 시간이 아니라 인지 능력을 향상시켜 마음이 예리하고 집중된 상태를 유지하게 한다. 점심 때 뉴로빅 운동을 짧게 실험하는 것만으로도 인지 상태에 놀라운 효과를 가져올 수 있다. <strong>글쓰기나 식사 같은 일상적인 작업에 비우세손을 사용하는 것부터 시작하라. 이 단순한 변화가 뇌에 도전을 주어 보통 활성화되지 않는 경로를 활성화하고 사고의 유연성을 높인다.</strong>
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">⑤</div>
+          <div class="answer-text"><span class="choice-ko">Midday Neurobics: Refresh Your Brain and Stay Sharp<br>(점심 시간 뉴로빅: 뇌를 새롭게 하고 날카롭게 유지하라)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          • "This power of a midday break is often underestimated" → midday(점심 시간)<br>
+          • "Neurobic exercises... create a mental oasis that refreshes" → Neurobics + Refresh<br>
+          • "ensuring your mind remains sharp and focused" → Stay Sharp
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">Brain recharged when doing nothing — 아무것도 안 할 때가 아님. 뉴로빅 운동을 해야 효과 있음.</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span class="wrong-reason">Illusion in effects of Neurobic Exercises — 환상·착각이 아님. 오히려 효과를 긍정적으로 주장.</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">How Neurobic Exercises Enhance Physical Abilities — 신체 능력이 아닌 인지 능력(cognitive) 강조.</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">Middle of busy day: Focus Peaks — 집중이 최고조인 시간이 아님. 오히려 인지 피로를 예방하는 게 목적.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">⑤</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">분사구문 (결과·부대상황)</div>
+          <div class="grammar-eng">"it boosts your cognitive capabilities, <u>ensuring</u> your mind remains sharp"</div>
+          <div class="grammar-ko">주절의 결과로 이어지는 분사구문. "~해서 결국 ~하게 한다."</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">Start with + 동명사</div>
+          <div class="grammar-eng">"<u>Start with using</u> your non-dominant hand for routine tasks"</div>
+          <div class="grammar-ko">start with ~ing : ~하는 것부터 시작하다</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">underestimate</div><div class="vocab-meaning">과소평가하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">cognitive</div><div class="vocab-meaning">인지의, 인식의</div></div>
+          <div class="vocab-item"><div class="vocab-word">neurobic</div><div class="vocab-meaning">뉴로빅 (뇌 자극 운동)</div></div>
+          <div class="vocab-item"><div class="vocab-word">agile</div><div class="vocab-meaning">기민한, 민첩한</div></div>
+          <div class="vocab-item"><div class="vocab-word">oasis</div><div class="vocab-meaning">오아시스, 안식처</div></div>
+          <div class="vocab-item"><div class="vocab-word">dominant</div><div class="vocab-meaning">우세한, 주도적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">pathway</div><div class="vocab-meaning">경로, 통로</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q25-28 MISSING ========================= -->
+  <div class="missing-block" id="q25-28">
+    <div class="nums">25번 · 26번 · 27번 · 28번</div>
+    <div>업로드된 PDF에 해당 지문 페이지(4페이지)가 포함되어 있지 않아 자료를 생성할 수 없습니다.</div>
+    <div style="margin-top:8px;font-size:0.78rem">문제지 4페이지(도표·세부내용 파악 문항들)를 별도로 제공해주시면 추가하겠습니다.</div>
+  </div>
+
+  <!-- ========================= Q29 ========================= -->
+  <div class="q-block" id="q29">
+    <div class="q-header">
+      <div class="q-num">29</div>
+      <div class="q-type">어법상 틀린 것</div>
+      <div class="q-title">다음 글의 밑줄 친 부분 중, 어법상 틀린 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        When a cell divides, the genomes of ① <span class="underline">its</span> two daughters are often not quite identical to each other or to that of the parent cell. On rare occasions, the error may represent a change for the better; more probably, it will cause no significant difference in the cell's prospects. But in some cases, the error will cause serious damage; for example, by ② <span class="underline">disrupting</span> the coding sequence for a key protein. Changes due to mistakes of the first type will tend to be perpetuated, because the altered cell has an increased likelihood of reproducing itself. Changes due to mistakes of the second type ― neutral changes ― may be perpetuated or not: it is a matter of chance ③ <span class="underline">whether</span> the altered cell or its cousins will succeed. But changes that cause serious damage ④ <span class="underline">lead</span> nowhere: the cell that suffers them dies, leaving no progeny. Through endless repetition of this cycle of mutation and natural selection organisms evolve: their genetic specifications change, sometimes ⑤ <span class="underline">give</span> organisms new ways to exploit the environment more effectively, to survive in competition with others, and to reproduce successfully.
+      </div>
+
+      <div class="translation-box">
+        세포가 분열할 때, ①그것의 두 딸세포의 게놈은 서로 또는 모세포의 게놈과 완전히 동일하지 않은 경우가 많다. 드물게 그 오류는 더 나은 변화를 나타낼 수 있고, 더 일반적으로는 세포의 전망에 큰 차이를 가져오지 않는다. 하지만 어떤 경우에는 오류가 심각한 손상을 일으키는데, 예를 들어 핵심 단백질의 코딩 서열을 ②방해함으로써 그렇다. 첫 번째 유형의 실수로 인한 변화는 영속될 경향이 있는데, 변형된 세포가 스스로를 재생산할 가능성이 높아지기 때문이다. 두 번째 유형의 실수로 인한 변화 — 중립적 변화 — 는 영속될 수도 있고 아닐 수도 있다. 변형된 세포나 그 유사 세포가 성공할지는 우연의 문제다. 하지만 심각한 손상을 일으키는 변화는 ④아무런 결과로 이어지지 않는다. 그것을 겪는 세포는 죽고 자손을 남기지 않는다. 돌연변이와 자연선택의 이 순환이 끝없이 반복되면서 생물은 진화한다. 그들의 유전적 사양이 변화하며, 때때로 생물에게 환경을 더 효과적으로 이용하고, 다른 것들과의 경쟁에서 살아남고, 성공적으로 번식하는 새로운 방법을 ⑤준다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답 — 틀린 것</div>
+        <div class="answer-block">
+          <div class="answer-num">⑤</div>
+          <div class="answer-text"><span class="choice-ko">give → <strong>giving</strong></span><br>
+          <span style="font-size:0.85rem;color:var(--muted)">분사구문이어야 하는데 동사원형 give로 잘못 씀</span></div>
+        </div>
+        <div class="evidence-tag">오류 분석</div>
+        <div class="evidence-box">
+          문장 구조: "their genetic specifications change, sometimes <strong>giving</strong> organisms new ways..."<br>
+          → 주절(change) 뒤에 부대상황을 나타내는 <strong>분사구문</strong>이 필요. 동사 give를 쓰면 접속사 없이 동사 두 개가 나란히 있게 됨 (문법 오류).<br>
+          → 주어(specifications)가 give하는 능동 관계이므로 현재분사 <strong>giving</strong>이 맞음.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">나머지 선지가 맞는 이유</div>
+        <div class="wrong-grid">
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">①</span>
+            <span class="wrong-reason" style="color:var(--text)">its — 소유격. 앞의 "a cell"을 받는 단수 소유격 its가 맞음. daughters가 복수지만 소유 주체는 cell(단수).</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">②</span>
+            <span class="wrong-reason" style="color:var(--text)">disrupting — 전치사 by 뒤에는 동명사(v-ing). "by disrupting" ✓</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">③</span>
+            <span class="wrong-reason" style="color:var(--text)">whether — "it is a matter of chance <strong>whether</strong> the cell will succeed" → 명사절을 이끄는 whether ✓</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">④</span>
+            <span class="wrong-reason" style="color:var(--text)">lead — 주어 "changes"가 복수이므로 동사 lead(복수형) ✓. leads가 아님.</span>
+          </div>
+          <div class="wrong-item">
+            <span class="wrong-num">⑤</span>
+            <span class="wrong-reason">give → giving ← 정답 (분사구문 필요)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법 — 분사구문</div>
+        <div class="grammar-block">
+          <div class="grammar-title">부대상황 분사구문</div>
+          <div class="grammar-eng">"their genetic specifications change, sometimes <u>giving</u> organisms new ways..."</div>
+          <div class="grammar-ko">
+            분사구문: 접속사 없이 앞 주절과 연결. 주어(specifications)가 give하는 능동 → 현재분사 giving.<br>
+            [패턴] 주절, + v-ing ~ (결과/부대상황)
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">genome</div><div class="vocab-meaning">게놈, 유전체</div></div>
+          <div class="vocab-item"><div class="vocab-word">perpetuate</div><div class="vocab-meaning">영속시키다, 지속시키다</div></div>
+          <div class="vocab-item"><div class="vocab-word">neutral</div><div class="vocab-meaning">중립적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">progeny</div><div class="vocab-meaning">자손, 후손</div></div>
+          <div class="vocab-item"><div class="vocab-word">mutation</div><div class="vocab-meaning">돌연변이</div></div>
+          <div class="vocab-item"><div class="vocab-word">exploit</div><div class="vocab-meaning">이용하다, 활용하다</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q30 ========================= -->
+  <div class="q-block" id="q30">
+    <div class="q-header">
+      <div class="q-num">30</div>
+      <div class="q-type">문맥상 낱말의 쓰임 [3점]</div>
+      <div class="q-title">다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Within liberal culture, the value of fair equality of opportunity for individuals ① <span class="underline">outweighs</span> the preservation of the family's integrity. In contrast, for Confucian culture, while seeking fair equality of opportunity for individuals is important, the family assumes a fundamental role in human flourishing, and living within a family institution is considered the ② <span class="underline">essential</span> way of life. Individuals are primarily understood as family members before they are regarded as state citizens. Therefore, for Confucians, the family ③ <span class="underline">possesses</span> inherent value that should never be abandoned, even if it results in certain societal inequalities. Some cultures, like the liberal one, may choose to impose increasing ④ <span class="underline">restrictions</span> on the role of families and implement more egalitarian government programs for education, healthcare, and other positive rights in society in the pursuit of fair equality of opportunity. On the other hand, other cultures, like the Confucian one, may prefer to primarily assign welfare responsibilities to the family, ⑤ <span class="underline">rejecting</span> inequalities stemming from the existence of the family as long as everyone's basic freedoms and rights are safeguarded in the state.
+      </div>
+
+      <div class="translation-box">
+        자유주의 문화 내에서 개인을 위한 공정한 기회 균등의 가치는 가족의 온전함 보존보다 ①중요하다. 반면, 유교 문화의 경우 개인을 위한 공정한 기회 균등을 추구하는 것이 중요하지만, 가족은 인간의 번영에서 근본적인 역할을 맡고, 가족 제도 내에서 사는 것이 ②필수적인 삶의 방식으로 여겨진다. 개인은 국가 시민으로 여겨지기 전에 우선적으로 가족 구성원으로 이해된다. 따라서 유교에서 가족은 어떤 사회적 불평등을 초래하더라도 절대 포기해서는 안 되는 내재적 가치를 ③지닌다. 자유주의 같은 일부 문화는 공정한 기회 균등 추구 속에서 가족 역할에 대한 ④제한을 늘리고 교육, 의료 등에서 더 평등주의적인 정부 프로그램을 시행할 수 있다. 반면, 유교 같은 다른 문화는 국가에서 모든 사람의 기본적 자유와 권리가 보장되는 한, 가족에게 복지 책임을 우선 배분하며 가족의 존재에서 비롯되는 불평등을 ⑤거부하기(→ 수용하기)를 선호할 수 있다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답 — 문맥상 부적절한 것</div>
+        <div class="answer-block">
+          <div class="answer-num">⑤</div>
+          <div class="answer-text"><span class="choice-ko">rejecting → <strong>accepting</strong> (수용하기)</span></div>
+        </div>
+        <div class="evidence-tag">오류 분석</div>
+        <div class="evidence-box">
+          유교 문화는 가족이 사회적 불평등을 초래하더라도 가족을 포기해서는 안 된다(③번)고 주장함.<br>
+          → 유교는 가족 존재로 인한 불평등을 <strong>수용(accepting)</strong>하는 입장.<br>
+          → rejecting(거부하다)을 쓰면, "유교가 불평등을 거부한다"는 뜻이 되어 앞 내용과 모순.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">나머지 선지가 맞는 이유</div>
+        <div class="wrong-grid">
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">①</span>
+            <span class="wrong-reason" style="color:var(--text)">outweighs — 자유주의는 개인 기회 균등 &gt; 가족 보존. "더 중요시한다" ✓</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">②</span>
+            <span class="wrong-reason" style="color:var(--text)">essential — 유교에서 가족 내 삶은 필수적인 삶의 방식. ✓</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">③</span>
+            <span class="wrong-reason" style="color:var(--text)">possesses — 가족이 내재적 가치를 지닌다(possesses). ✓</span>
+          </div>
+          <div class="wrong-item correct-mark">
+            <span class="wrong-num">④</span>
+            <span class="wrong-reason" style="color:var(--text)">restrictions — 자유주의 문화가 가족 역할에 제한을 늘린다. ✓</span>
+          </div>
+          <div class="wrong-item">
+            <span class="wrong-num">⑤</span>
+            <span class="wrong-reason">rejecting → accepting ← 정답 (유교는 가족으로 인한 불평등 수용)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름 (대조 구조)</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">A</div><strong>자유주의:</strong> 개인 기회 균등 &gt; 가족 → 가족 역할 제한, 평등주의 프로그램</div>
+          <div class="flow-item"><div class="flow-icon">B</div><strong>유교:</strong> 가족이 근본 → 불평등이 생겨도 가족 가치 유지, 불평등 수용</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">outweigh</div><div class="vocab-meaning">~보다 더 중요하다/크다</div></div>
+          <div class="vocab-item"><div class="vocab-word">preservation</div><div class="vocab-meaning">보존, 유지</div></div>
+          <div class="vocab-item"><div class="vocab-word">flourishing</div><div class="vocab-meaning">번영, 번성</div></div>
+          <div class="vocab-item"><div class="vocab-word">inherent</div><div class="vocab-meaning">내재적인, 본질적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">egalitarian</div><div class="vocab-meaning">평등주의적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">safeguard</div><div class="vocab-meaning">보호하다, 보장하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">stem from</div><div class="vocab-meaning">~에서 비롯되다</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q31 ========================= -->
+  <div class="q-block" id="q31">
+    <div class="q-header">
+      <div class="q-num">31</div>
+      <div class="q-type">빈칸 추론</div>
+      <div class="q-title">다음 빈칸에 들어갈 말로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Statistics in the twentieth century became the systematic collection of quantitative information needed by the state. This process occurred in all the industrialised countries as a key part of their becoming modern states. Desrosières writes: "It is difficult to think simultaneously that the objects being measured really do exist and that this is only a convention". Yet this is the case. Phenomena such as prices being charged and products being sold exist, but the categories and classification frameworks supporting the collection, aggregation, and organisation of official statistics are devised to serve the purposes of the state, for macroeconomic or for social policies. Theodore Porter described the use of statistics to create <strong>[ ________________ ]</strong>: "Quantification is a way of making decisions without seeming to decide", characterising it as a "social technology" intended to build trust in authority.
+        <br><br>① public welfare &nbsp;&nbsp; ② social mobility &nbsp;&nbsp; ③ state authority &nbsp;&nbsp; ④ market efficiency &nbsp;&nbsp; ⑤ scientific innovation
+      </div>
+
+      <div class="translation-box">
+        20세기에 통계는 국가가 필요로 하는 양적 정보의 체계적 수집이 되었다. 이 과정은 모든 산업화 국가에서 현대 국가가 되는 핵심 과정으로 일어났다. Desrosières는 "측정되는 대상들이 실제로 존재한다는 것과 이것이 단지 관례에 불과하다는 것을 동시에 생각하기 어렵다"고 쓴다. 그러나 그것이 사실이다. 가격이 부과되고 제품이 판매되는 등의 현상은 존재하지만, 공식 통계의 수집·집계·조직화를 지원하는 범주와 분류 틀은 거시경제적 또는 사회 정책을 위한 국가의 목적에 봉사하도록 고안된다. Theodore Porter는 통계의 사용이 <strong>[국가 권위]</strong>를 만들어 낸다고 묘사했다. "수량화는 결정하는 것처럼 보이지 않으면서 결정을 내리는 방법"으로, 그것을 권위에 대한 신뢰를 구축하기 위한 "사회적 기술"로 특징지었다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">③</div>
+          <div class="answer-text"><span class="choice-ko">state authority (국가 권위)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거 — 빈칸 앞뒤 문맥</div>
+        <div class="evidence-box">
+          빈칸 뒤: "Quantification is a way of <strong>making decisions without seeming to decide</strong>" → 객관처럼 보이지만 사실은 결정하는 것<br>
+          → 통계가 결정을 중립적·객관적인 것처럼 포장 → <strong>국가 권위에 대한 신뢰</strong> 구축<br>
+          → "social technology intended to <strong>build trust in authority</strong>" → authority = state authority
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">public welfare — 공공 복지 생성이 목적이 아님. 국가 권위 형성이 핵심.</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span class="wrong-reason">social mobility — 사회 이동성 언급 없음</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">③</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">market efficiency — 시장 효율성 관련 내용 없음</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">scientific innovation — 과학적 혁신이 아닌 국가 통치 목적의 통계</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>20세기 통계 = 국가가 필요로 하는 양적 정보 수집</div>
+          <div class="flow-item"><div class="flow-icon">02</div>통계의 범주·분류 → 국가 목적(거시경제·사회 정책)에 봉사</div>
+          <div class="flow-item"><div class="flow-icon">03</div>통계 = 결정을 중립처럼 보이게 하는 방법 → [국가 권위] 창출</div>
+          <div class="flow-item"><div class="flow-icon">04</div>"권위에 대한 신뢰를 구축하는 사회적 기술" (결론)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">quantitative</div><div class="vocab-meaning">양적인, 수량적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">aggregation</div><div class="vocab-meaning">집계, 집합</div></div>
+          <div class="vocab-item"><div class="vocab-word">devise</div><div class="vocab-meaning">고안하다, 만들어내다</div></div>
+          <div class="vocab-item"><div class="vocab-word">macroeconomic</div><div class="vocab-meaning">거시경제적</div></div>
+          <div class="vocab-item"><div class="vocab-word">quantification</div><div class="vocab-meaning">수량화</div></div>
+          <div class="vocab-item"><div class="vocab-word">characterise</div><div class="vocab-meaning">~의 특징을 나타내다</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= Q32 ========================= -->
+  <div class="q-block" id="q32">
+    <div class="q-header">
+      <div class="q-num">32</div>
+      <div class="q-type">빈칸 추론 [3점]</div>
+      <div class="q-title">다음 빈칸에 들어갈 말로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+
+      <div class="passage-box">
+        Just as an expert in the taste and colour of wine will gain much by being aware of the chemistry that underlies those qualities, so each perspective on the body can potentially enhance the others. And yet every scientific tool, from microscopes to mathematics, and every aspect of the body, from the brain to the microorganism, requires such depth of expertise that this tends not to happen: we tend to study the human body in silos, each community sectioned from the others by its own specialised vocabulary. Research communities may be dedicated to one type of scientific tool or a specific component of the body, such as one type of cell. How different types of cell communicate with one another becomes its own specialist topic. Even simple forms of life on Earth are now rarely studied as a whole, and the human body is evidently much more complex. As long ago as 1890, The Times newspaper commented that knowledge 'had already become too vast to be manageable'. Today, <strong>[ ________________ ]</strong>.
+        <br><br>① a whole is as easy to study as its parts<br>② nobody is an expert in the whole of anything<br>③ a single cell speaks for the entire human body<br>④ modern tools simplify the study of the human body<br>⑤ researches across subjects have replaced isolated ones
+      </div>
+
+      <div class="translation-box">
+        와인의 맛과 색상 전문가가 그 특성의 밑바탕에 있는 화학을 알게 됨으로써 많은 것을 얻듯이, 신체에 대한 각각의 관점도 다른 관점들을 향상시킬 수 있다. 그러나 현미경에서 수학에 이르는 모든 과학적 도구와, 뇌에서 미생물에 이르는 신체의 모든 측면은 너무 깊은 전문성을 요구하기 때문에 이것은 일어나지 않는 경향이 있다. 우리는 인체를 개별적으로 분리하여 연구하는 경향이 있으며, 각 공동체는 자체 전문 용어로 다른 공동체로부터 분리된다. 연구 공동체는 하나의 과학적 도구나 신체의 특정 구성 요소(예: 특정 유형의 세포)에 집중할 수 있다. 서로 다른 유형의 세포가 어떻게 소통하는지가 그 자체로 전문 주제가 된다. 지구의 단순한 생명체조차 이제는 전체로서 거의 연구되지 않으며, 인체는 분명히 훨씬 더 복잡하다. 1890년에 이미 The Times는 지식이 '이미 관리하기 너무 방대해졌다'고 했다. 오늘날에는 <strong>[아무도 어떤 것의 전체에 대한 전문가가 아니다]</strong>.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">nobody is an expert in the whole of anything<br>(아무도 어떤 것의 전체에 대한 전문가가 아니다)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          • "we tend to study the human body <strong>in silos</strong>" → 분리하여 연구<br>
+          • "Even simple forms of life are rarely studied <strong>as a whole</strong>" → 전체 연구 드묾<br>
+          • 1890년 Times: "knowledge 'had already become too vast to be manageable'" → 더욱 방대해진 오늘날<br>
+          → 결론: 오늘날 지식이 더 방대해졌으므로 "아무도 전체 전문가가 없다"
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span class="wrong-reason">whole is as easy to study as its parts — 반대. 전체 연구가 더 어렵다고 함.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">②</span><span class="wrong-reason" style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span class="wrong-reason">single cell speaks for entire human body — 반대. 세포 하나로 전체 설명 불가.</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span class="wrong-reason">modern tools simplify the study — 반대. 더 많은 전문성 필요 → 더 복잡해짐.</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span class="wrong-reason">researches across subjects have replaced isolated ones — 반대. 여전히 silos에 갇혀 있음.</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"we tend to study the human body in silos, each community sectioned from the others by its own specialised vocabulary."<br><span style="color:var(--muted);font-size:0.82rem">→ 글 전체의 핵심 주장. 통합적 연구가 어렵고, 결과적으로 아무도 전체 전문가가 되지 못함.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">Just as ~ so ~ (비례 접속)</div>
+          <div class="grammar-eng">"<u>Just as</u> an expert in wine will gain much..., <u>so</u> each perspective on the body can enhance the others."</div>
+          <div class="grammar-ko">"~하듯이, 마찬가지로 ~하다" — 비유를 통한 주장 도입 구조</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">such ~ that (결과)</div>
+          <div class="grammar-eng">"requires <u>such depth of expertise</u> that this tends not to happen"</div>
+          <div class="grammar-ko">such + 명사 + that ~: 너무 ~해서 결과적으로 ~하다</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">underlie</div><div class="vocab-meaning">~의 기저에 있다, 밑에 있다</div></div>
+          <div class="vocab-item"><div class="vocab-word">in silos</div><div class="vocab-meaning">개별적으로 분리하여</div></div>
+          <div class="vocab-item"><div class="vocab-word">sectioned</div><div class="vocab-meaning">분리된, 구획된</div></div>
+          <div class="vocab-item"><div class="vocab-word">dedicated to</div><div class="vocab-meaning">~에 집중하는, 전념하는</div></div>
+          <div class="vocab-item"><div class="vocab-word">evidently</div><div class="vocab-meaning">분명히, 명백하게</div></div>
+          <div class="vocab-item"><div class="vocab-word">manageable</div><div class="vocab-meaning">관리 가능한</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+</body>
+</html>
