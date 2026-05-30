@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영문법 체계도</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=DM+Serif+Display&display=swap');
+
+  :root {
+    --bg: #0d0f14;
+    --surface: #141820;
+    --surface2: #1c2230;
+    --border: rgba(255,255,255,0.07);
+
+    --c1: #4f9cf9;   /* 문장 구조 - 파랑 */
+    --c2: #f97b4f;   /* 동사 중심 - 오렌지 */
+    --c3: #a78bfa;   /* 준동사 - 보라 */
+    --c4: #34d399;   /* 연결/수식 - 초록 */
+    --c5: #f59e0b;   /* 특수 구문 - 노랑 */
+
+    --text: #e8eaf0;
+    --sub: #8892a4;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans KR', sans-serif;
+    min-height: 100vh;
+    padding: 40px 24px 60px;
+  }
+
+  /* 배경 그래픽 */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(79,156,249,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(167,139,250,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* 헤더 */
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .header .en-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--sub);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    background: linear-gradient(135deg, #fff 0%, var(--sub) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  .header p {
+    font-size: 13px;
+    color: var(--sub);
+    font-weight: 300;
+  }
+
+  /* 범례 */
+  .legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--sub);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  /* 메인 그리드 */
+  .main-grid {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* 레이어 타이틀 */
+  .layer-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--sub);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 14px;
+    padding-left: 4px;
+    border-left: 2px solid var(--border);
+    padding-left: 10px;
+  }
+
+  /* 카드 행 */
+  .row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* 카드 */
+  .card {
+    flex: 1;
+    min-width: 160px;
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .card.c1::before { background: var(--c1); }
+  .card.c2::before { background: var(--c2); }
+  .card.c3::before { background: var(--c3); }
+  .card.c4::before { background: var(--c4); }
+  .card.c5::before { background: var(--c5); }
+
+  /* 카드 내부 글로우 */
+  .card::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    opacity: 0.04;
+  }
+  .card.c1::after { background: var(--c1); }
+  .card.c2::after { background: var(--c2); }
+  .card.c3::after { background: var(--c3); }
+  .card.c4::after { background: var(--c4); }
+  .card.c5::after { background: var(--c5); }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+  }
+  .card-icon {
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .c1 .card-icon { background: rgba(79,156,249,0.15); }
+  .c2 .card-icon { background: rgba(249,123,79,0.15); }
+  .c3 .card-icon { background: rgba(167,139,250,0.15); }
+  .c4 .card-icon { background: rgba(52,211,153,0.15); }
+  .c5 .card-icon { background: rgba(245,158,11,0.15); }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .card-en {
+    font-size: 10px;
+    color: var(--sub);
+    font-weight: 300;
+    margin-top: 1px;
+  }
+
+  .card-desc {
+    font-size: 11.5px;
+    color: var(--sub);
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  /* 서브포인트 */
+  .sub-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .sub-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 1px solid;
+  }
+  .c1 .sub-tag { background: rgba(79,156,249,0.1); border-color: rgba(79,156,249,0.25); color: #7bb8fb; }
+  .c2 .sub-tag { background: rgba(249,123,79,0.1); border-color: rgba(249,123,79,0.25); color: #fb9b7c; }
+  .c3 .sub-tag { background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.25); color: #b8a4fb; }
+  .c4 .sub-tag { background: rgba(52,211,153,0.1); border-color: rgba(52,211,153,0.25); color: #5ee0a8; }
+  .c5 .sub-tag { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.25); color: #fbb530; }
+
+  /* 화살표 구분선 */
+  .arrow-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--sub);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .arrow-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+  }
+  .arrow-center {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    color: var(--sub);
+  }
+
+  /* 관계 설명 박스 */
+  .relation-box {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 36px;
+  }
+  .relation-box h3 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sub);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .relation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .relation-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .relation-arrow {
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .relation-text {
+    font-size: 12px;
+    color: var(--sub);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .relation-text strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* 핵심 연결 관계 */
+  .connection-map {
+    max-width: 980px;
+    margin: 24px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .conn-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--sub);
+  }
+  .conn-item .badges {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  .badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  .badge.b1 { background: rgba(79,156,249,0.15); color: #7bb8fb; }
+  .badge.b2 { background: rgba(249,123,79,0.15); color: #fb9b7c; }
+  .badge.b3 { background: rgba(167,139,250,0.15); color: #b8a4fb; }
+  .badge.b4 { background: rgba(52,211,153,0.15); color: #5ee0a8; }
+  .badge.b5 { background: rgba(245,158,11,0.15); color: #fbb530; }
+  .conn-arrow { color: var(--sub); font-size: 13px; flex-shrink:0; }
+  .conn-desc { font-size: 11px; color: var(--sub); font-weight: 300; }
+
+  @media (max-width: 600px) {
+    .connection-map { grid-template-columns: 1fr; }
+    .row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="en-title">English Grammar · System Chart</div>
+  <h1>영문법 체계도</h1>
+  <p>문법 요소들의 계층 구조와 상호 관계</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c1)"></div>문장 구조</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c2)"></div>동사 중심</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c3)"></div>준동사</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c4)"></div>연결·수식</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--c5)"></div>특수 구문</div>
+</div>
+
+<div class="main-grid">
+
+  <!-- LAYER 1 -->
+  <div>
+    <div class="layer-label">Layer 1 · 문장의 뼈대</div>
+    <div class="row">
+
+      <div class="card c1">
+        <div class="card-header">
+          <div class="card-icon">🏗️</div>
+          <div>
+            <div class="card-title">문형 (형식)</div>
+            <div class="card-en">Sentence Patterns</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          문장의 기본 골격. 주어·동사·목적어·보어의 배열 방식. 모든 영어 문장은 5가지 형식 중 하나에 속하며, 이후 모든 문법의 출발점이 됨.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">1형식 SV</span>
+          <span class="sub-tag">2형식 SVC</span>
+          <span class="sub-tag">3형식 SVO</span>
+          <span class="sub-tag">4형식 SVOO</span>
+          <span class="sub-tag">5형식 SVOC</span>
+        </div>
+      </div>
+
+      <div class="card c2">
+        <div class="card-header">
+          <div class="card-icon">⏱️</div>
+          <div>
+            <div class="card-title">시제</div>
+            <div class="card-en">Tense</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          동사의 형태를 통해 시간 정보를 나타냄. 단순·진행·완료·완료진행의 조합. 시제는 문형 속 동사(V)가 어떻게 변형되는지를 결정함.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">현재/과거/미래</span>
+          <span class="sub-tag">진행형</span>
+          <span class="sub-tag">완료형</span>
+          <span class="sub-tag">완료진행</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div class="arrow-row">
+    <div class="arrow-line"></div>
+    <div class="arrow-center">↓ 동사(V)에서 파생 · 확장</div>
+    <div class="arrow-line"></div>
+  </div>
+
+  <!-- LAYER 2 -->
+  <div>
+    <div class="layer-label">Layer 2 · 동사 중심 확장</div>
+    <div class="row">
+
+      <div class="card c2">
+        <div class="card-header">
+          <div class="card-icon">🔧</div>
+          <div>
+            <div class="card-title">조동사</div>
+            <div class="card-en">Modal Verbs</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          동사 앞에 붙어 가능·의무·추측 등 의미를 추가. 시제와 밀접하게 연관되며, 가정법에서 핵심 역할을 함.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">can/could</span>
+          <span class="sub-tag">will/would</span>
+          <span class="sub-tag">may/might</span>
+          <span class="sub-tag">must/should</span>
+          <span class="sub-tag">had better</span>
+        </div>
+      </div>
+
+      <div class="card c2">
+        <div class="card-header">
+          <div class="card-icon">🔄</div>
+          <div>
+            <div class="card-title">수동태</div>
+            <div class="card-en">Passive Voice</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          목적어(O)를 주어 자리로 이동. 「be + p.p.」 구조. 3형식 이상 문형에서만 성립하며 시제 변화와 함께 적용됨.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">be + p.p.</span>
+          <span class="sub-tag">by + 행위자</span>
+          <span class="sub-tag">4형식 수동</span>
+          <span class="sub-tag">5형식 수동</span>
+        </div>
+      </div>
+
+      <div class="card c2">
+        <div class="card-header">
+          <div class="card-icon">💭</div>
+          <div>
+            <div class="card-title">가정법</div>
+            <div class="card-en">Subjunctive</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          현실과 반대되는 가정을 표현. 시제를 한 단계 앞으로 당겨 사용. 조동사(would/could/might)와 항상 함께 등장.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">가정법 과거</span>
+          <span class="sub-tag">가정법 과거완료</span>
+          <span class="sub-tag">I wish</span>
+          <span class="sub-tag">as if</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div class="arrow-row">
+    <div class="arrow-line"></div>
+    <div class="arrow-center">↓ 동사를 명사·형용사·부사로 변환</div>
+    <div class="arrow-line"></div>
+  </div>
+
+  <!-- LAYER 3 -->
+  <div>
+    <div class="layer-label">Layer 3 · 준동사 (동사의 변신)</div>
+    <div class="row">
+
+      <div class="card c3">
+        <div class="card-header">
+          <div class="card-icon">∞</div>
+          <div>
+            <div class="card-title">부정사</div>
+            <div class="card-en">Infinitive (to-V)</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          「to + 동사원형」. 동사를 명사·형용사·부사로 사용. 5형식 목적격보어로도 쓰임. 의미상 주어는 「for + 목적격」.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">명사적 용법</span>
+          <span class="sub-tag">형용사적 용법</span>
+          <span class="sub-tag">부사적 용법</span>
+          <span class="sub-tag">원형부정사</span>
+        </div>
+      </div>
+
+      <div class="card c3">
+        <div class="card-header">
+          <div class="card-icon">✦</div>
+          <div>
+            <div class="card-title">동명사</div>
+            <div class="card-en">Gerund (-ing)</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          동사 + -ing → 명사 역할. 주어·목적어·보어 자리에 위치. 부정사와 목적어 자리를 두고 경쟁하며 의미가 달라지는 동사가 중요 포인트.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">주어 역할</span>
+          <span class="sub-tag">목적어 역할</span>
+          <span class="sub-tag">동명사 vs 부정사</span>
+          <span class="sub-tag">관용표현</span>
+        </div>
+      </div>
+
+      <div class="card c3">
+        <div class="card-header">
+          <div class="card-icon">◈</div>
+          <div>
+            <div class="card-title">분사</div>
+            <div class="card-en">Participle</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          -ing(현재분사)·p.p.(과거분사) → 형용사 역할. 명사 수식 또는 보어. 분사구문으로 확장 시 부사 역할도 담당.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">현재분사 -ing</span>
+          <span class="sub-tag">과거분사 p.p.</span>
+          <span class="sub-tag">분사구문</span>
+          <span class="sub-tag">독립분사구문</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div class="arrow-row">
+    <div class="arrow-line"></div>
+    <div class="arrow-center">↓ 문장과 문장, 명사와 동사를 연결</div>
+    <div class="arrow-line"></div>
+  </div>
+
+  <!-- LAYER 4 -->
+  <div>
+    <div class="layer-label">Layer 4 · 연결과 수식</div>
+    <div class="row">
+
+      <div class="card c4">
+        <div class="card-header">
+          <div class="card-icon">🔗</div>
+          <div>
+            <div class="card-title">접속사</div>
+            <div class="card-en">Conjunction</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          단어·구·절을 연결. 등위접속사는 대등한 요소를, 종속접속사는 주절과 종속절을 이어 복잡한 문장 구성.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">등위 and/but/or</span>
+          <span class="sub-tag">명사절 that</span>
+          <span class="sub-tag">부사절 when/if</span>
+          <span class="sub-tag">상관접속사</span>
+        </div>
+      </div>
+
+      <div class="card c4">
+        <div class="card-header">
+          <div class="card-icon">🧩</div>
+          <div>
+            <div class="card-title">관계사</div>
+            <div class="card-en">Relative</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          접속사 + 대명사/부사의 기능을 동시에 수행. 선행사를 수식하는 형용사절을 이끌거나(관계대명사), 장소·시간·이유를 나타냄(관계부사).
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">who/which/that</span>
+          <span class="sub-tag">whose/whom</span>
+          <span class="sub-tag">where/when/why</span>
+          <span class="sub-tag">what (선행사 포함)</span>
+        </div>
+      </div>
+
+      <div class="card c4">
+        <div class="card-header">
+          <div class="card-icon">📍</div>
+          <div>
+            <div class="card-title">전치사</div>
+            <div class="card-en">Preposition</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          명사 앞에 위치해 장소·시간·방향·방법 등의 의미 추가. 전치사구 전체가 형용사 또는 부사 역할을 함.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">in/on/at (장소·시간)</span>
+          <span class="sub-tag">for/of/with</span>
+          <span class="sub-tag">전치사 + 동명사</span>
+          <span class="sub-tag">전치사 관용표현</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div class="arrow-row">
+    <div class="arrow-line"></div>
+    <div class="arrow-center">↓ 전체 문법 위에서 작동하는 규칙</div>
+    <div class="arrow-line"></div>
+  </div>
+
+  <!-- LAYER 5 -->
+  <div>
+    <div class="layer-label">Layer 5 · 규칙과 특수 구문</div>
+    <div class="row">
+
+      <div class="card c5">
+        <div class="card-header">
+          <div class="card-icon">⚖️</div>
+          <div>
+            <div class="card-title">수일치</div>
+            <div class="card-en">Subject-Verb Agreement</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          주어의 수(단·복수)에 맞춰 동사 형태를 일치시키는 규칙. 부분표현(most of / a number of 등), 부정대명사(every·each·both), 수를 착각하기 쉬운 명사가 핵심 출제 포인트.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">부분표현 + of</span>
+          <span class="sub-tag">every/each → 단수</span>
+          <span class="sub-tag">the number of</span>
+          <span class="sub-tag">a number of</span>
+        </div>
+      </div>
+
+      <div class="card c5">
+        <div class="card-header">
+          <div class="card-icon">📊</div>
+          <div>
+            <div class="card-title">비교구문</div>
+            <div class="card-en">Comparison</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          형용사·부사의 원급·비교급·최상급으로 정도를 비교. 비교 대상의 격(주격 vs 목적격)과 병렬 구조가 주요 오류 포인트.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">as ~ as (원급)</span>
+          <span class="sub-tag">-er / more (비교급)</span>
+          <span class="sub-tag">-est / most (최상급)</span>
+          <span class="sub-tag">the + 비교급, the + 비교급</span>
+        </div>
+      </div>
+
+      <div class="card c5">
+        <div class="card-header">
+          <div class="card-icon">✨</div>
+          <div>
+            <div class="card-title">특수구문</div>
+            <div class="card-en">Special Structures</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          도치·강조·생략·삽입 등 어순이나 구조가 기본 문형에서 벗어난 구문. 수능에서는 주로 도치(부정어구 강조)와 it ~ that 강조구문이 출제됨.
+        </div>
+        <div class="sub-points">
+          <span class="sub-tag">도치</span>
+          <span class="sub-tag">it ~ that 강조</span>
+          <span class="sub-tag">생략</span>
+          <span class="sub-tag">병렬 구조</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- 핵심 연결 관계 -->
+<div class="relation-box">
+  <h3>📎 핵심 연결 관계 — 문법 요소 간 상호작용</h3>
+  <div class="connection-map">
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b2">시제</span>
+        <span class="conn-arrow">→</span>
+        <span class="badge b2">가정법</span>
+      </div>
+      <div class="conn-desc">시제를 한 단계 앞당겨 반사실 표현</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b2">수동태</span>
+        <span class="conn-arrow">←</span>
+        <span class="badge b1">문형(3·4·5형식)</span>
+      </div>
+      <div class="conn-desc">목적어가 있어야 수동태 변환 가능</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b3">부정사</span>
+        <span class="conn-arrow">↔</span>
+        <span class="badge b3">동명사</span>
+      </div>
+      <div class="conn-desc">목적어 자리 경쟁 · 의미 차이 주의</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b3">분사(-ing/p.p.)</span>
+        <span class="conn-arrow">→</span>
+        <span class="badge b2">수동태(p.p.)</span>
+      </div>
+      <div class="conn-desc">과거분사가 수동의 의미를 형성</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b4">관계사</span>
+        <span class="conn-arrow">=</span>
+        <span class="badge b4">접속사</span><span style="font-size:10px;color:var(--sub);">+</span><span class="badge b4">대명사/부사</span>
+      </div>
+      <div class="conn-desc">두 역할을 동시에 수행</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b2">조동사</span>
+        <span class="conn-arrow">→</span>
+        <span class="badge b2">가정법</span>
+      </div>
+      <div class="conn-desc">would/could/might가 가정법 귀결절 구성</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b5">수일치</span>
+        <span class="conn-arrow">↔</span>
+        <span class="badge b1">문형</span>
+      </div>
+      <div class="conn-desc">모든 문형에서 S-V 수일치 규칙 적용</div>
+    </div>
+
+    <div class="conn-item">
+      <div class="badges">
+        <span class="badge b5">특수구문(도치)</span>
+        <span class="conn-arrow">←</span>
+        <span class="badge b4">부사·접속사</span>
+      </div>
+      <div class="conn-desc">부정어구·Only 등이 문두로 이동 시 도치 발생</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
