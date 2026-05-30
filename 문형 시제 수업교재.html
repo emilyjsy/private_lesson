@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영문법 — 문형 & 시제</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --bg:       #f7f5f0;
+  --surface:  #ffffff;
+  --surface2: #f0ede6;
+  --border:   #e0dbd0;
+  --text:     #1a1814;
+  --sub:      #7a756a;
+  --subsub:   #a89f94;
+
+  --blue:     #2563c0;
+  --blue-bg:  #eef3fb;
+  --blue-bd:  #c5d5f0;
+
+  --orange:   #c45c1a;
+  --orange-bg:#fdf2ea;
+  --orange-bd:#f0cfa8;
+
+  --red:      #c0252d;
+  --red-bg:   #fdeaeb;
+  --red-bd:   #f0b8bb;
+
+  --green:    #1a7a52;
+  --green-bg: #eaf7f1;
+  --green-bd: #a8e0c5;
+
+  --purple:   #6b35c0;
+  --purple-bg:#f3eefb;
+  --purple-bd:#cdb8f0;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ── 네비게이션 ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 52px;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--text);
+  margin-right: 32px;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--sub);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.nav-links a:hover { background: var(--surface2); color: var(--text); }
+.nav-links a.active { background: var(--text); color: white; }
+
+/* ── 레이아웃 ── */
+.wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ── 챕터 헤더 ── */
+.chapter-head {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+.chapter-head .label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--subsub);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.chapter-head h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: var(--text);
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+.chapter-head p {
+  color: var(--sub);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* ── 섹션 ── */
+.section {
+  margin-bottom: 64px;
+  scroll-margin-top: 70px;
+}
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: var(--border);
+  line-height: 1;
+  font-weight: 700;
+}
+.section-name {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+.section-en {
+  font-size: 12px;
+  color: var(--subsub);
+  font-weight: 300;
+}
+
+/* ── 서브섹션 ── */
+.sub {
+  margin-bottom: 32px;
+}
+.sub-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--sub);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sub-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── 성분표 (문장 성분) ── */
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.comp-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comp-sym {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.comp-info .name { font-size: 13px; font-weight: 700; }
+.comp-info .detail { font-size: 11px; color: var(--sub); margin-top: 1px; }
+
+/* ── 형식 카드 ── */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.form-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+.form-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--subsub);
+  line-height: 1;
+  min-width: 32px;
+}
+.form-info {}
+.form-title {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+.form-formula {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--sub);
+  margin-top: 3px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.formula-s { color: var(--blue); font-weight: 600; }
+.formula-v { color: var(--orange); font-weight: 600; }
+.formula-o { color: var(--green); font-weight: 600; }
+.formula-c { color: var(--purple); font-weight: 600; }
+.formula-io { color: var(--red); font-weight: 600; }
+.formula-sep { color: var(--subsub); }
+.form-desc {
+  font-size: 13px;
+  color: var(--sub);
+  background: var(--surface2);
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.form-body { padding: 18px 22px; }
+
+/* ── 예문 블록 ── */
+.examples {
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+.ex-item {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.ex-item:last-child { border-bottom: none; }
+.ex-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--text);
+  font-weight: 400;
+  flex: 1;
+  line-height: 1.6;
+}
+.ex-ko {
+  font-size: 11.5px;
+  color: var(--sub);
+  font-weight: 300;
+  flex-shrink: 0;
+}
+.ex-note {
+  font-size: 11px;
+  color: var(--subsub);
+  margin-left: 4px;
+}
+
+/* ── 단어 리스트 ── */
+.word-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+.chip {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.chip .en { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.chip .ko { color: var(--sub); font-size: 11px; margin-left: 4px; }
+
+/* ── 알림 박스들 ── */
+.box {
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 14px 0;
+  border: 1px solid;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.box .box-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.box-warn {
+  background: var(--orange-bg);
+  border-color: var(--orange-bd);
+  color: var(--orange);
+}
+.box-warn .box-title { color: var(--orange); }
+.box-warn .detail { color: #7a3a10; }
+
+.box-error {
+  background: var(--red-bg);
+  border-color: var(--red-bd);
+}
+.box-error .box-title { color: var(--red); }
+.box-error .detail { color: #7a1a1e; }
+
+.box-tip {
+  background: var(--blue-bg);
+  border-color: var(--blue-bd);
+}
+.box-tip .box-title { color: var(--blue); }
+.box-tip .detail { color: #1a3a7a; }
+
+.box-green {
+  background: var(--green-bg);
+  border-color: var(--green-bd);
+}
+.box-green .box-title { color: var(--green); }
+.box-green .detail { color: #0f4a32; }
+
+/* ── 비교 코드 블록 ── */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+.compare-item {
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.compare-ok {
+  background: var(--green-bg);
+  border: 1px solid var(--green-bd);
+}
+.compare-no {
+  background: var(--red-bg);
+  border: 1px solid var(--red-bd);
+}
+.compare-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.compare-ok .compare-label { color: var(--green); }
+.compare-no .compare-label { color: var(--red); }
+.ok-line { color: var(--green); }
+.no-line { color: var(--red); text-decoration: line-through; }
+.reason { font-family: 'Noto Sans KR', sans-serif; font-size: 11px; color: var(--sub); margin-top: 6px; border-top: 1px solid var(--border); padding-top: 6px; }
+
+/* ── 표 ── */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 12px 0;
+}
+.tbl th {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 9px 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--sub);
+}
+.tbl td {
+  border: 1px solid var(--border);
+  padding: 9px 12px;
+  vertical-align: top;
+  background: var(--surface);
+}
+.tbl tr:hover td { background: var(--surface2); }
+.tbl .mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+.tbl .sub-text { color: var(--sub); font-size: 12px; }
+.tbl .center { text-align: center; }
+
+/* ── 구분선 ── */
+.chapter-divider {
+  margin: 72px 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.chapter-divider .line { flex: 1; height: 1px; background: var(--border); }
+.chapter-divider .label-text {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--subsub);
+  text-transform: uppercase;
+}
+
+/* ── 시제 그리드 ── */
+.tense-overview {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr 1fr;
+  gap: 6px;
+  margin: 16px 0;
+  font-size: 12px;
+}
+.tense-overview .header-cell {
+  background: var(--text);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 11px;
+}
+.tense-overview .row-label {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.tense-cell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.tense-cell .formula-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--sub);
+  display: block;
+  margin-top: 2px;
+}
+
+/* ── 시제 카드 ── */
+.tense-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.tense-card-head {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.tense-card-head h3 {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+.tense-card-head .formula-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 3px 9px;
+  border-radius: 5px;
+  color: var(--sub);
+}
+.tense-card-body { padding: 16px 20px; }
+
+/* ── 용법 뱃지 ── */
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+.usage-item {
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 1px solid;
+}
+.usage-item .u-title {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.usage-item .u-adv {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--sub);
+  margin-bottom: 6px;
+}
+.usage-item .u-ex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.u-experience { background: #eef3fb; border-color: #c5d5f0; }
+.u-experience .u-title { color: var(--blue); }
+.u-completion { background: #eaf7f1; border-color: #a8e0c5; }
+.u-completion .u-title { color: var(--green); }
+.u-continuity { background: #f3eefb; border-color: #cdb8f0; }
+.u-continuity .u-title { color: var(--purple); }
+.u-result { background: var(--orange-bg); border-color: var(--orange-bd); }
+.u-result .u-title { color: var(--orange); }
+
+/* ── 전체 비교 표 ── */
+.final-table { margin-top: 16px; }
+
+/* 스크롤바 */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .component-grid { grid-template-columns: repeat(2, 1fr); }
+  .compare { grid-template-columns: 1fr; }
+  .usage-grid { grid-template-columns: 1fr; }
+  .tense-overview { font-size: 10px; }
+  .nav { padding: 0 16px; }
+  .wrapper { padding: 32px 16px 60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 네비게이션 -->
+<nav class="nav">
+  <div class="nav-logo">문형 & 시제</div>
+  <div class="nav-links">
+    <a href="#form1">1형식</a>
+    <a href="#form2">2형식</a>
+    <a href="#form3">3형식</a>
+    <a href="#form4">4형식</a>
+    <a href="#form5">5형식</a>
+    <a href="#tense-simple">단순시제</a>
+    <a href="#tense-prog">진행형</a>
+    <a href="#tense-perf">완료형</a>
+    <a href="#tense-perfprog">완료진행</a>
+    <a href="#tense-errors">시제 오답</a>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+<!-- ════════════════════════════════
+     PART 1: 문형
+════════════════════════════════ -->
+<div class="chapter-head">
+  <div class="label">Part 1 · Sentence Patterns</div>
+  <h1>문형 — 5가지 형식</h1>
+  <p>모든 영어 문장은 주어·동사·목적어·보어의 배열 방식에 따라 5가지 형식 중 하나에 속한다.</p>
+</div>
+
+<!-- 문장 성분 -->
+<div class="sub">
+  <div class="sub-title">문장 성분 (Sentence Elements)</div>
+  <div class="component-grid">
+    <div class="comp-item">
+      <div class="comp-sym formula-s">S</div>
+      <div class="comp-info">
+        <div class="name">주어 Subject</div>
+        <div class="detail">~은/는, ~이/가 · 명사·대명사</div>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-sym formula-v">V</div>
+      <div class="comp-info">
+        <div class="name">동사 Verb</div>
+        <div class="detail">~하다 · 동사</div>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-sym formula-o">O</div>
+      <div class="comp-info">
+        <div class="name">목적어 Object</div>
+        <div class="detail">~을/를 · 명사·대명사</div>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-sym formula-c">C</div>
+      <div class="comp-info">
+        <div class="name">보어 Complement</div>
+        <div class="detail">주어/목적어 설명 · 명사·형용사</div>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-sym formula-io">IO</div>
+      <div class="comp-info">
+        <div class="name">간접목적어</div>
+        <div class="detail">~에게 · 명사·대명사</div>
+      </div>
+    </div>
+    <div class="comp-item">
+      <div class="comp-sym formula-o">DO</div>
+      <div class="comp-info">
+        <div class="name">직접목적어</div>
+        <div class="detail">~을/를 · 명사·대명사</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 1형식 -->
+<div class="section" id="form1">
+  <div class="section-title">
+    <div class="section-num">01</div>
+    <div>
+      <div class="section-name">1형식 <span style="font-size:16px;font-weight:400;color:var(--sub)">S + V</span></div>
+      <div class="section-en">Subject + Verb</div>
+    </div>
+  </div>
+
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">주어와 동사만으로 의미가 완전한 문장. 부사(구)가 덧붙어도 문장의 형식은 변하지 않는다.</p>
+
+  <div class="sub">
+    <div class="sub-title">주요 자동사 (1형식 동사)</div>
+    <div class="word-chips">
+      <div class="chip"><span class="en">live</span><span class="ko">살다</span></div>
+      <div class="chip"><span class="en">walk</span><span class="ko">걷다</span></div>
+      <div class="chip"><span class="en">appear</span><span class="ko">나타나다</span></div>
+      <div class="chip"><span class="en">fall</span><span class="ko">떨어지다</span></div>
+      <div class="chip"><span class="en">happen</span><span class="ko">발생하다</span></div>
+      <div class="chip"><span class="en">rise</span><span class="ko">솟다</span></div>
+      <div class="chip"><span class="en">disappear</span><span class="ko">사라지다</span></div>
+      <div class="chip"><span class="en">occur</span><span class="ko">일어나다</span></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">예문</div>
+    <div class="examples">
+      <div class="ex-item">
+        <span class="ex-en"><span class="formula-s">Stars</span> <span class="formula-v">twinkle</span>.</span>
+        <span class="ex-ko">별들이 반짝인다.</span>
+      </div>
+      <div class="ex-item">
+        <span class="ex-en"><span class="formula-s">The boy</span> <span class="formula-v">shouted</span> loudly.</span>
+        <span class="ex-ko">그 소년이 크게 소리쳤다.</span>
+      </div>
+      <div class="ex-item">
+        <span class="ex-en"><span class="formula-s">She</span> <span class="formula-v">jumped</span> into the lake.</span>
+        <span class="ex-ko">그녀는 호수로 뛰어들었다.</span>
+      </div>
+    </div>
+    <div class="box box-tip">
+      <div class="box-title">💡 부사(구)는 문장 성분이 아니다</div>
+      <div class="detail"><span style="font-family:JetBrains Mono,monospace">loudly</span>나 <span style="font-family:JetBrains Mono,monospace">into the lake</span>는 수식어일 뿐 → 제거해도 문장 성립 → 형식 판단 시 제외</div>
+    </div>
+  </div>
+
+  <div class="box box-warn">
+    <div class="box-title">⚠️ 장소 부사구가 필요한 동사</div>
+    <div class="detail">be / lie / stand / stay → 장소·시간 부사구 없으면 의미가 불완전<br>
+    <span style="font-family:JetBrains Mono,monospace;font-size:12px;">Robert is <b>in his room</b>. &nbsp;/&nbsp; The tree stands <b>on the hill</b>.</span></div>
+  </div>
+</div>
+
+<!-- 2형식 -->
+<div class="section" id="form2">
+  <div class="section-title">
+    <div class="section-num">02</div>
+    <div>
+      <div class="section-name">2형식 <span style="font-size:16px;font-weight:400;color:var(--sub)">S + V + C</span></div>
+      <div class="section-en">Subject + Verb + Complement (주격보어)</div>
+    </div>
+  </div>
+
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">동사만으로 의미가 불완전해 보어가 필요. 핵심: <strong>주어(S) = 보어(C)</strong></p>
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">보어가 될 수 있는 품사: <strong>명사 / 형용사</strong> &nbsp;—&nbsp; <strong style="color:var(--red)">부사는 절대 불가</strong></p>
+
+  <div class="sub">
+    <div class="sub-title">2형식 주요 동사</div>
+    <table class="tbl">
+      <tr>
+        <th>유형</th><th>동사</th><th>의미</th><th>예문</th>
+      </tr>
+      <tr>
+        <td>be동사류</td>
+        <td class="mono">be / remain / keep / stay</td>
+        <td class="sub-text">~이다 / ~인 채로 있다</td>
+        <td class="mono">The boy kept <b>calm</b>.</td>
+      </tr>
+      <tr>
+        <td>변화동사</td>
+        <td class="mono">become / get / grow / go / turn</td>
+        <td class="sub-text">~해지다, ~하게 되다</td>
+        <td class="mono">Leaves turn <b>red</b> in fall.</td>
+      </tr>
+      <tr>
+        <td>외관/추측</td>
+        <td class="mono">seem / appear</td>
+        <td class="sub-text">~인 것 같다, ~해 보이다</td>
+        <td class="mono">This seems <b>fresh</b>.</td>
+      </tr>
+      <tr>
+        <td>감각동사</td>
+        <td class="mono">look / sound / taste / smell / feel</td>
+        <td class="sub-text">~하게 보이다/들리다/나다</td>
+        <td class="mono">You look <b>angry</b>.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">핵심 오답 — 감각동사 뒤는 형용사!</div>
+    <div class="compare">
+      <div class="compare-item compare-ok">
+        <div class="compare-label">✓ 정답</div>
+        <div class="ok-line">He became strong.</div>
+        <div class="ok-line">This curry smells good.</div>
+        <div class="ok-line">You look happy.</div>
+      </div>
+      <div class="compare-item compare-no">
+        <div class="compare-label">✗ 오답</div>
+        <div class="no-line">He became strongly.</div>
+        <div class="no-line">This curry smells well.</div>
+        <div class="no-line">You look happily.</div>
+        <div class="reason">보어 자리 = 형용사 / 부사 ❌</div>
+      </div>
+    </div>
+    <div class="box box-tip">
+      <div class="box-title">💡 -ly로 끝나도 형용사인 것들</div>
+      <div class="detail">friendly(친절한) / lovely(사랑스러운) / lonely(외로운) → 보어로 쓸 수 있음</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">SVC 관용 표현 (암기 필수)</div>
+    <div class="word-chips">
+      <div class="chip"><span class="en">come true</span><span class="ko">실현되다</span></div>
+      <div class="chip"><span class="en">get sick</span><span class="ko">병들다</span></div>
+      <div class="chip"><span class="en">go bad</span><span class="ko">상하다</span></div>
+      <div class="chip"><span class="en">look young</span><span class="ko">젊어 보이다</span></div>
+      <div class="chip"><span class="en">run dry</span><span class="ko">말라버리다</span></div>
+      <div class="chip"><span class="en">turn pale</span><span class="ko">창백해지다</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 3형식 -->
+<div class="section" id="form3">
+  <div class="section-title">
+    <div class="section-num">03</div>
+    <div>
+      <div class="section-name">3형식 <span style="font-size:16px;font-weight:400;color:var(--sub)">S + V + O</span></div>
+      <div class="section-en">Subject + Verb + Object</div>
+    </div>
+  </div>
+
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">타동사가 목적어를 직접 취하는 문형. 목적어 품사: <strong>명사·대명사</strong>만 가능.</p>
+
+  <div class="sub">
+    <div class="sub-title">⚠️ 전치사 없이 쓰는 타동사 (빈출!)</div>
+    <table class="tbl">
+      <tr><th>동사</th><th class="no-line" style="color:var(--red)">틀린 형태 ✗</th><th style="color:var(--green)">올바른 형태 ✓</th><th>의미</th></tr>
+      <tr>
+        <td class="mono">discuss</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">discuss about ~</td>
+        <td class="mono">discuss ~</td>
+        <td class="sub-text">~을 논의하다</td>
+      </tr>
+      <tr>
+        <td class="mono">enter</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">enter into ~</td>
+        <td class="mono">enter ~</td>
+        <td class="sub-text">~에 들어가다</td>
+      </tr>
+      <tr>
+        <td class="mono">answer</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">answer to ~</td>
+        <td class="mono">answer ~</td>
+        <td class="sub-text">~에 답하다</td>
+      </tr>
+      <tr>
+        <td class="mono">approach</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">approach to ~</td>
+        <td class="mono">approach ~</td>
+        <td class="sub-text">~에 다가가다</td>
+      </tr>
+      <tr>
+        <td class="mono">marry</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">marry with ~</td>
+        <td class="mono">marry ~</td>
+        <td class="sub-text">~와 결혼하다</td>
+      </tr>
+      <tr>
+        <td class="mono">reach</td>
+        <td class="mono sub-text" style="text-decoration:line-through;color:var(--red)">reach to ~</td>
+        <td class="mono">reach ~</td>
+        <td class="sub-text">~에 도달하다</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">⚠️ 혼동하기 쉬운 자동사 vs 타동사</div>
+    <table class="tbl">
+      <tr><th>자동사</th><th>의미</th><th>타동사</th><th>의미</th></tr>
+      <tr>
+        <td class="mono">rise — rose — risen</td>
+        <td class="sub-text">솟다, 오르다</td>
+        <td class="mono">raise — raised — raised</td>
+        <td class="sub-text">올리다 (목적어 필요)</td>
+      </tr>
+      <tr>
+        <td class="mono">lie — lay — lain</td>
+        <td class="sub-text">눕다, 놓여 있다</td>
+        <td class="mono">lay — laid — laid</td>
+        <td class="sub-text">눕히다, 놓다 (목적어 필요)</td>
+      </tr>
+      <tr>
+        <td class="mono">sit — sat — sat</td>
+        <td class="sub-text">앉다</td>
+        <td class="mono">seat — seated — seated</td>
+        <td class="sub-text">앉히다 (목적어 필요)</td>
+      </tr>
+    </table>
+    <div class="examples" style="margin-top:8px;">
+      <div class="ex-item">
+        <span class="ex-en">The Sun <b>rises</b>. &nbsp;/&nbsp; He <b>raised</b> his hand.</span>
+        <span class="ex-ko">자동사 vs 타동사</span>
+      </div>
+      <div class="ex-item">
+        <span class="ex-en">I <b>lay</b> on the grass. &nbsp;/&nbsp; He <b>laid</b> a hand on my shoulder.</span>
+        <span class="ex-ko">자동사 lie 과거형 = lay</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4형식 -->
+<div class="section" id="form4">
+  <div class="section-title">
+    <div class="section-num">04</div>
+    <div>
+      <div class="section-name">4형식 <span style="font-size:16px;font-weight:400;color:var(--sub)">S + V + IO + DO</span></div>
+      <div class="section-en">Subject + Verb + Indirect Object + Direct Object</div>
+    </div>
+  </div>
+
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">'~에게 ~을 V해주다' → 수여동사. 목적어가 두 개. <strong>앞 = 간접목적어(IO, ~에게) / 뒤 = 직접목적어(DO, ~을)</strong></p>
+
+  <div class="sub">
+    <div class="sub-title">주요 수여동사</div>
+    <div class="word-chips">
+      <div class="chip"><span class="en">give</span><span class="ko">주다</span></div>
+      <div class="chip"><span class="en">show</span><span class="ko">보여주다</span></div>
+      <div class="chip"><span class="en">teach</span><span class="ko">가르쳐주다</span></div>
+      <div class="chip"><span class="en">tell</span><span class="ko">말해주다</span></div>
+      <div class="chip"><span class="en">send</span><span class="ko">보내주다</span></div>
+      <div class="chip"><span class="en">bring</span><span class="ko">가져다주다</span></div>
+      <div class="chip"><span class="en">buy</span><span class="ko">사주다</span></div>
+      <div class="chip"><span class="en">make</span><span class="ko">만들어주다</span></div>
+      <div class="chip"><span class="en">lend</span><span class="ko">빌려주다</span></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">4형식 → 3형식 전환 (전치사 사용)</div>
+    <table class="tbl">
+      <tr><th>전치사</th><th>해당 동사</th><th>4형식</th><th>3형식 전환</th></tr>
+      <tr>
+        <td class="mono center"><b>to</b></td>
+        <td class="sub-text">give, lend, show, tell, teach, send (대부분)</td>
+        <td class="mono">He gave <b>me</b> advice.</td>
+        <td class="mono">He gave advice <b>to me</b>.</td>
+      </tr>
+      <tr>
+        <td class="mono center"><b>for</b></td>
+        <td class="sub-text">buy, make, get, find</td>
+        <td class="mono">Dad bought <b>me</b> a computer.</td>
+        <td class="mono">Dad bought a computer <b>for me</b>.</td>
+      </tr>
+      <tr>
+        <td class="mono center"><b>of</b></td>
+        <td class="sub-text">ask</td>
+        <td class="mono">I asked <b>him</b> a favor.</td>
+        <td class="mono">I asked a favor <b>of him</b>.</td>
+      </tr>
+    </table>
+    <div class="box box-error">
+      <div class="box-title">🚫 직접목적어가 대명사이면 반드시 3형식으로</div>
+      <div class="detail">
+        <span style="font-family:JetBrains Mono,monospace;color:var(--green)">I showed it to my father. ✓</span><br>
+        <span style="font-family:JetBrains Mono,monospace;text-decoration:line-through;color:var(--red)">I showed my father it. ✗</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5형식 -->
+<div class="section" id="form5">
+  <div class="section-title">
+    <div class="section-num">05</div>
+    <div>
+      <div class="section-name">5형식 <span style="font-size:16px;font-weight:400;color:var(--sub)">S + V + O + C</span></div>
+      <div class="section-en">Subject + Verb + Object + Complement (목적격보어)</div>
+    </div>
+  </div>
+
+  <p style="color:var(--sub);margin-bottom:16px;font-size:13px;">'주어가 목적어를 C로/하게 V한다'. 핵심: <strong>목적어(O) = 목적격보어(C)</strong><br>목적격보어 품사: <strong>명사 / 형용사</strong> &nbsp;—&nbsp; <strong style="color:var(--red)">부사 불가</strong></p>
+
+  <div class="sub">
+    <div class="sub-title">주요 5형식 동사</div>
+    <table class="tbl">
+      <tr><th>동사</th><th>의미</th><th>예문</th></tr>
+      <tr><td class="mono">make</td><td class="sub-text">O를 C가 되게 하다</td><td class="mono">The news made her <b>sad</b>.</td></tr>
+      <tr><td class="mono">keep / leave</td><td class="sub-text">O를 C인 상태로 두다</td><td class="mono">She always keeps her desk <b>clean</b>.</td></tr>
+      <tr><td class="mono">find</td><td class="sub-text">O가 C임을 알게 되다</td><td class="mono">I found my teacher <b>kind</b>.</td></tr>
+      <tr><td class="mono">call</td><td class="sub-text">O를 C라고 부르다</td><td class="mono">People call him <b>Danny</b>.</td></tr>
+      <tr><td class="mono">name</td><td class="sub-text">O를 C라고 이름짓다</td><td class="mono">We named the cat <b>Coco</b>.</td></tr>
+      <tr><td class="mono">elect</td><td class="sub-text">O를 C로 선출하다</td><td class="mono">We elected Jenny <b>the leader</b>.</td></tr>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="sub-title">4형식 vs 5형식 구별법</div>
+    <div class="box box-tip">
+      <div class="box-title">💡 O와 뒤 명사가 같은 대상인지 확인</div>
+      <div class="detail">
+        <span style="font-family:JetBrains Mono,monospace">We elected Jenny <b>the leader</b>.</span> → Jenny <b>=</b> the leader → <b>5형식 (SVOC)</b><br>
+        <span style="font-family:JetBrains Mono,monospace">Mr. Ford made his son <b>a toy car</b>.</span> → son <b>≠</b> toy car → <b>4형식 (SVOO)</b>
+      </div>
+    </div>
+    <div class="compare">
+      <div class="compare-item compare-ok">
+        <div class="compare-label">✓ 5형식 목적격보어</div>
+        <div class="ok-line">Vitamin C makes skin smooth.</div>
+        <div class="ok-line">People call him Danny.</div>
+        <div class="reason">형용사/명사 → 목적격보어 가능</div>
+      </div>
+      <div class="compare-item compare-no">
+        <div class="compare-label">✗ 부사는 불가</div>
+        <div class="no-line">Vitamin C makes skin smoothly.</div>
+        <div class="no-line">She kept her room tidily.</div>
+        <div class="reason">목적격보어 자리 = 부사 ❌</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════
+     PART 2: 시제
+════════════════════════════════ -->
+<div class="chapter-divider">
+  <div class="line"></div>
+  <div class="label-text">Part 2 · Tense</div>
+  <div class="line"></div>
+</div>
+
+<div class="chapter-head">
+  <div class="label">Part 2 · Tense</div>
+  <h1>시제 — 전체 12가지</h1>
+  <p>동사의 형태를 통해 시간 정보를 표현. 단순·진행·완료·완료진행 × 현재·과거·미래 = 12가지.</p>
+</div>
+
+<!-- 시제 전체 개요 -->
+<div class="sub">
+  <div class="sub-title">시제 전체 구조</div>
+  <div class="tense-overview">
+    <div class="header-cell" style="background:transparent;"></div>
+    <div class="header-cell">단순</div>
+    <div class="header-cell">진행</div>
+    <div class="header-cell">완료</div>
+    <div class="header-cell">완료진행</div>
+
+    <div class="row-label">현재</div>
+    <div class="tense-cell">현재단순<span class="formula-mono">V / V-s</span></div>
+    <div class="tense-cell">현재진행<span class="formula-mono">am/is/are + -ing</span></div>
+    <div class="tense-cell">현재완료<span class="formula-mono">have/has + p.p.</span></div>
+    <div class="tense-cell">현재완료진행<span class="formula-mono">have been + -ing</span></div>
+
+    <div class="row-label">과거</div>
+    <div class="tense-cell">과거단순<span class="formula-mono">V-ed</span></div>
+    <div class="tense-cell">과거진행<span class="formula-mono">was/were + -ing</span></div>
+    <div class="tense-cell">과거완료<span class="formula-mono">had + p.p.</span></div>
+    <div class="tense-cell">과거완료진행<span class="formula-mono">had been + -ing</span></div>
+
+    <div class="row-label">미래</div>
+    <div class="tense-cell">미래단순<span class="formula-mono">will + V</span></div>
+    <div class="tense-cell">미래진행<span class="formula-mono">will be + -ing</span></div>
+    <div class="tense-cell">미래완료<span class="formula-mono">will have + p.p.</span></div>
+    <div class="tense-cell">미래완료진행<span class="formula-mono">will have been + -ing</span></div>
+  </div>
+</div>
+
+<!-- 단순시제 -->
+<div class="section" id="tense-simple">
+  <div class="section-title">
+    <div class="section-num">①</div>
+    <div>
+      <div class="section-name">단순시제</div>
+      <div class="section-en">Simple Tense — 현재 / 과거 / 미래</div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>현재단순</h3>
+      <span class="formula-badge">V / V-s (3인칭 단수)</span>
+    </div>
+    <div class="tense-card-body">
+      <div class="word-chips" style="margin-bottom:12px;">
+        <div class="chip"><span class="ko">현재 사실·습관·반복</span></div>
+        <div class="chip"><span class="ko">불변의 진리·속담</span></div>
+      </div>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">I <b>drink</b> coffee every morning.</span>
+          <span class="ex-ko">습관 (every morning)</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-en">The Earth <b>goes</b> around the Sun.</span>
+          <span class="ex-ko">불변의 진리</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-en">Water <b>boils</b> at 100°C.</span>
+          <span class="ex-ko">과학적 사실</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>과거단순</h3>
+      <span class="formula-badge">V-ed / 불규칙</span>
+    </div>
+    <div class="tense-card-body">
+      <div class="word-chips" style="margin-bottom:12px;">
+        <div class="chip"><span class="ko">과거 특정 시점의 일</span></div>
+        <div class="chip" style="background:var(--orange-bg);border-color:var(--orange-bd);"><span class="en" style="color:var(--orange)">yesterday / last ~ / ~ ago / when</span></div>
+      </div>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">She <b>visited</b> Paris <u>last summer</u>.</span>
+          <span class="ex-ko">과거 특정 시점</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-en">He <b>didn't come</b> to school <u>yesterday</u>.</span>
+          <span class="ex-ko">과거 부정</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>미래단순</h3>
+      <span class="formula-badge">will + V &nbsp;/&nbsp; be going to + V</span>
+    </div>
+    <div class="tense-card-body">
+      <table class="tbl">
+        <tr><th></th><th>will + V</th><th>be going to + V</th></tr>
+        <tr>
+          <td>의미</td>
+          <td class="sub-text">즉흥적 결정, 단순 미래 예측</td>
+          <td class="sub-text">이미 계획된 것, 근거 있는 예측</td>
+        </tr>
+        <tr>
+          <td>예문</td>
+          <td class="mono">I'll have the pasta.<br><span style="font-size:10px;color:var(--sub)">(메뉴 보다 즉흥 결정)</span></td>
+          <td class="mono">I'm going to meet her tomorrow.<br><span style="font-size:10px;color:var(--sub)">(이미 약속된 일)</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 진행형 -->
+<div class="section" id="tense-prog">
+  <div class="section-title">
+    <div class="section-num">②</div>
+    <div>
+      <div class="section-name">진행형</div>
+      <div class="section-en">Progressive — "지금 이 순간 하고 있는 중"</div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>현재진행</h3>
+      <span class="formula-badge">am / is / are + V-ing</span>
+    </div>
+    <div class="tense-card-body">
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">She <b>is studying</b> for the exam now.</span>
+          <span class="ex-ko">지금 공부하는 중</span>
+        </div>
+        <div class="ex-item">
+          <span class="ex-en">They <b>are playing</b> basketball.</span>
+          <span class="ex-ko">현재 진행 중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>과거진행</h3>
+      <span class="formula-badge">was / were + V-ing</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">과거의 특정 시점에 진행 중이던 일. 주로 when절과 함께 쓰임.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">I <b>was sleeping</b> when he called.</span>
+          <span class="ex-ko">그가 전화할 때 자고 있었다</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>미래진행</h3>
+      <span class="formula-badge">will be + V-ing</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">미래의 특정 시점에 진행 중일 일.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">This time tomorrow, I <b>will be flying</b> to Jeju.</span>
+          <span class="ex-ko">내일 이 시간엔 날아가고 있을 것</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box-error">
+    <div class="box-title">🚫 진행형으로 쓰지 않는 동사 — 상태동사</div>
+    <div class="detail">
+      <div class="word-chips" style="margin-bottom:10px;">
+        <div class="chip"><span class="en">know</span></div>
+        <div class="chip"><span class="en">like / love / hate</span></div>
+        <div class="chip"><span class="en">want / need</span></div>
+        <div class="chip"><span class="en">have (소유)</span></div>
+        <div class="chip"><span class="en">believe</span></div>
+        <div class="chip"><span class="en">remember</span></div>
+      </div>
+      <span style="font-family:JetBrains Mono,monospace;text-decoration:line-through;color:var(--red)">I am knowing the answer. ✗</span><br>
+      <span style="font-family:JetBrains Mono,monospace;color:var(--green)">I know the answer. ✓</span>
+    </div>
+  </div>
+</div>
+
+<!-- 완료형 -->
+<div class="section" id="tense-perf">
+  <div class="section-title">
+    <div class="section-num">③</div>
+    <div>
+      <div class="section-name">완료형</div>
+      <div class="section-en">Perfect — "과거와 현재의 연결"</div>
+    </div>
+  </div>
+
+  <!-- 현재완료 -->
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>현재완료 ⭐ 가장 중요</h3>
+      <span class="formula-badge">have / has + p.p.</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:14px;">과거의 일이 현재까지 영향을 미칠 때 사용. <strong>4가지 용법</strong></p>
+      <div class="usage-grid">
+        <div class="usage-item u-experience">
+          <div class="u-title">경험 — ~한 적이 있다</div>
+          <div class="u-adv">ever / never / before / once</div>
+          <div class="u-ex">I have been to Japan <b>before</b>.</div>
+        </div>
+        <div class="usage-item u-completion">
+          <div class="u-title">완료 — 막 ~했다</div>
+          <div class="u-adv">just / already / yet</div>
+          <div class="u-ex">She has <b>just</b> finished her homework.</div>
+        </div>
+        <div class="usage-item u-continuity">
+          <div class="u-title">계속 — ~해 오고 있다</div>
+          <div class="u-adv">for / since</div>
+          <div class="u-ex">He has lived here <b>for</b> 10 years.</div>
+        </div>
+        <div class="usage-item u-result">
+          <div class="u-title">결과 — ~해서 지금 ~이다</div>
+          <div class="u-adv">—</div>
+          <div class="u-ex">I have lost my key.<br><span style="font-size:10px;">(잃어버려서 지금 없다)</span></div>
+        </div>
+      </div>
+
+      <div class="box box-error" style="margin-top:14px;">
+        <div class="box-title">🚫 현재완료 + 과거 특정 시점 표현 = 절대 불가</div>
+        <div class="detail">
+          <span style="font-family:JetBrains Mono,monospace;text-decoration:line-through;color:var(--red)">I have seen him yesterday. ✗</span><br>
+          <span style="font-family:JetBrains Mono,monospace;color:var(--green)">I saw him yesterday. ✓</span><br>
+          <br>
+          <span style="color:var(--sub);font-size:12px;">함께 쓰면 안 되는 표현: yesterday / last year / ~ ago / when / just now</span>
+        </div>
+      </div>
+
+      <div class="box box-tip" style="margin-top:8px;">
+        <div class="box-title">💡 현재완료 vs 과거단순</div>
+        <div class="detail">
+          <span style="font-family:JetBrains Mono,monospace">I <b>went</b> to Japan last year.</span> → 과거단순 (last year = 특정 시점)<br>
+          <span style="font-family:JetBrains Mono,monospace">I <b>have been</b> to Japan before.</span> → 현재완료 (경험, 현재와 연결)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 과거완료 -->
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>과거완료 (대과거)</h3>
+      <span class="formula-badge">had + p.p.</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">과거보다 더 앞선 과거. 두 과거 사건의 선후 관계를 나타낼 때.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">When I <b>arrived</b>, the movie <b>had already started</b>.</span>
+          <span class="ex-ko">도착(과거) / 시작(더 앞선 과거)</span>
+        </div>
+      </div>
+      <div class="box box-error" style="margin-top:10px;">
+        <div class="box-title">🚫 빈출 오답</div>
+        <div class="detail">
+          <span style="font-family:JetBrains Mono,monospace;text-decoration:line-through;color:var(--red)">When I arrived, the movie already started. ✗</span><br>
+          <span style="font-family:JetBrains Mono,monospace;color:var(--green)">When I arrived, the movie had already started. ✓</span><br>
+          <span style="font-size:11px;color:var(--sub);">두 과거 사건의 선후 관계 → 더 먼저 일어난 것에 과거완료 필요</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 미래완료 -->
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>미래완료</h3>
+      <span class="formula-badge">will have + p.p.</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">미래 특정 시점까지 완료될 일. By + 미래 시점과 함께 자주 쓰임.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en"><u>By next year</u>, I <b>will have studied</b> English for 10 years.</span>
+          <span class="ex-ko">내년이면 10년이 되는 것</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 완료진행 -->
+<div class="section" id="tense-perfprog">
+  <div class="section-title">
+    <div class="section-num">④</div>
+    <div>
+      <div class="section-name">완료진행형</div>
+      <div class="section-en">Perfect Progressive — "과거부터 지금까지 계속 하는 중"</div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>현재완료진행</h3>
+      <span class="formula-badge">have / has been + V-ing</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">과거에 시작해서 지금도 진행 중 — 동작의 <strong>지속</strong>을 강조.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">I <b>have been waiting</b> for you for 2 hours.</span>
+          <span class="ex-ko">2시간째 계속 기다리는 중 (지금도)</span>
+        </div>
+      </div>
+      <div class="box box-tip" style="margin-top:10px;">
+        <div class="box-title">💡 현재완료 vs 현재완료진행</div>
+        <div class="detail">
+          <span style="font-family:JetBrains Mono,monospace">I have read the book.</span> → <strong>완료</strong> (다 읽었다)<br>
+          <span style="font-family:JetBrains Mono,monospace">I have been reading the book.</span> → <strong>진행</strong> (아직 읽는 중, 안 끝남)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tense-card">
+    <div class="tense-card-head">
+      <h3>과거완료진행</h3>
+      <span class="formula-badge">had been + V-ing</span>
+    </div>
+    <div class="tense-card-body">
+      <p style="font-size:13px;color:var(--sub);margin-bottom:10px;">과거의 특정 시점까지 계속 진행 중이었던 것.</p>
+      <div class="examples">
+        <div class="ex-item">
+          <span class="ex-en">She <b>had been crying</b> when he came in.</span>
+          <span class="ex-ko">그가 들어왔을 때 계속 울고 있던 상태</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 시제 빈출 오답 총정리 -->
+<div class="section" id="tense-errors">
+  <div class="section-title">
+    <div class="section-num">★</div>
+    <div>
+      <div class="section-name">시제 빈출 오답 총정리</div>
+      <div class="section-en">Common Errors in Tense</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-item compare-no">
+      <div class="compare-label">✗ 오답</div>
+      <div class="no-line">I have seen him yesterday.</div>
+      <div class="reason">현재완료 + yesterday (과거 특정 시점) 불가</div>
+    </div>
+    <div class="compare-item compare-ok">
+      <div class="compare-label">✓ 정답</div>
+      <div class="ok-line">I saw him yesterday.</div>
+      <div class="reason">과거 특정 시점 → 과거단순</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-item compare-no">
+      <div class="compare-label">✗ 오답</div>
+      <div class="no-line">When I arrived, the movie already started.</div>
+      <div class="reason">두 과거 사건의 선후 관계 — 과거완료 누락</div>
+    </div>
+    <div class="compare-item compare-ok">
+      <div class="compare-label">✓ 정답</div>
+      <div class="ok-line">When I arrived, the movie had already started.</div>
+      <div class="reason">더 앞선 과거 → had + p.p.</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-item compare-no">
+      <div class="compare-label">✗ 오답</div>
+      <div class="no-line">She is knowing the answer.</div>
+      <div class="reason">know = 상태동사 → 진행형 불가</div>
+    </div>
+    <div class="compare-item compare-ok">
+      <div class="compare-label">✓ 정답</div>
+      <div class="ok-line">She knows the answer.</div>
+      <div class="reason">상태동사 → 단순시제로</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="compare-item compare-no">
+      <div class="compare-label">✗ 오답</div>
+      <div class="no-line">I am going to Busan last weekend.</div>
+      <div class="reason">be going to = 미래 표현 → 과거에 못 씀</div>
+    </div>
+    <div class="compare-item compare-ok">
+      <div class="compare-label">✓ 정답</div>
+      <div class="ok-line">I went to Busan last weekend.</div>
+      <div class="reason">과거 → 과거단순</div>
+    </div>
+  </div>
+
+  <!-- 시제 최종 한눈에 -->
+  <div style="margin-top:24px;">
+    <div class="sub-title">시제 한눈에 비교</div>
+    <table class="tbl final-table">
+      <tr><th>시제</th><th>형태</th><th>핵심 의미</th><th>대표 예문</th></tr>
+      <tr>
+        <td>현재단순</td><td class="mono">V / V-s</td>
+        <td class="sub-text">습관·사실·진리</td>
+        <td class="mono">I study every day.</td>
+      </tr>
+      <tr>
+        <td>현재진행</td><td class="mono">am/is/are -ing</td>
+        <td class="sub-text">지금 하는 중</td>
+        <td class="mono">I am studying now.</td>
+      </tr>
+      <tr>
+        <td>현재완료</td><td class="mono">have/has p.p.</td>
+        <td class="sub-text">경험·완료·계속·결과</td>
+        <td class="mono">I have studied here.</td>
+      </tr>
+      <tr>
+        <td>현재완료진행</td><td class="mono">have been -ing</td>
+        <td class="sub-text">과거부터 지금까지 계속 중</td>
+        <td class="mono">I have been studying.</td>
+      </tr>
+      <tr style="background:var(--surface2);">
+        <td>과거단순</td><td class="mono">V-ed</td>
+        <td class="sub-text">과거 특정 시점</td>
+        <td class="mono">I studied yesterday.</td>
+      </tr>
+      <tr style="background:var(--surface2);">
+        <td>과거진행</td><td class="mono">was/were -ing</td>
+        <td class="sub-text">과거 그 순간 하는 중</td>
+        <td class="mono">I was studying then.</td>
+      </tr>
+      <tr style="background:var(--surface2);">
+        <td>과거완료</td><td class="mono">had p.p.</td>
+        <td class="sub-text">과거보다 더 앞선 과거</td>
+        <td class="mono">I had studied before.</td>
+      </tr>
+      <tr style="background:var(--surface2);">
+        <td>과거완료진행</td><td class="mono">had been -ing</td>
+        <td class="sub-text">과거 시점까지 계속 중</td>
+        <td class="mono">I had been studying.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</div><!-- /wrapper -->
+
+<script>
+// 네비 active 표시
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-links a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const id = entry.target.id;
+      const active = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-60px 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
