@@ -1,327 +1,599 @@
 <!DOCTYPE html>
+
 <html lang="ko">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>과외 HUB — 관리 대시보드</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
   :root {
+
     --bg: #0f1117;
+
     --surface: #181c27;
+
     --card: #1e2235;
+
     --border: rgba(255, 255, 255, 0.06);
+
     --accent: #4f8aff;
+
     --accent-rgb: 79, 138, 255;
+
     --text: #e8eaf6;
+
     --muted: #8891b4;
+
     --sans: 'Outfit', 'Noto Sans KR', sans-serif;
+
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
+
     background-color: var(--bg);
+
     color: var(--text);
+
     font-family: var(--sans);
+
     min-height: 100vh;
+
     padding: 2rem;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
   }
 
   header {
+
     width: 100%;
+
     max-width: 1000px;
+
     margin-bottom: 3rem;
+
     text-align: left;
+
     border-bottom: 1px solid var(--border);
+
     padding-bottom: 1.5rem;
+
   }
 
   header h1 {
+
     font-size: 2rem;
+
     font-weight: 700;
+
     letter-spacing: -0.5px;
+
     background: linear-gradient(45deg, #4f8aff, #7c5cfc);
+
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
   }
 
   header p {
+
     color: var(--muted);
+
     font-size: 0.95rem;
+
     margin-top: 0.5rem;
+
   }
 
   main {
+
     width: 100%;
+
     max-width: 1000px;
+
     display: grid;
+
     grid-template-columns: 250px 1fr;
+
     gap: 2.5rem;
+
   }
 
   /* 학생 목록 사이드바/버튼 영역 */
+
   .student-sidebar {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.75rem;
+
   }
 
   .sidebar-title {
+
     font-size: 0.85rem;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     color: var(--muted);
+
     margin-bottom: 0.5rem;
+
     font-weight: 600;
+
   }
 
   .student-btn {
+
     background: var(--surface);
+
     color: var(--text);
+
     border: 1px solid var(--border);
+
     padding: 1rem 1.25rem;
+
     border-radius: 12px;
+
     cursor: pointer;
+
     text-align: left;
+
     font-size: 1rem;
+
     font-weight: 500;
+
     transition: all 0.25s ease;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
   }
 
   .student-btn:hover {
+
     background: var(--card);
+
     border-color: rgba(var(--accent-rgb), 0.3);
+
     transform: translateY(-2px);
+
   }
 
   .student-btn.active {
+
     background: rgba(var(--accent-rgb), 0.1);
+
     border-color: var(--accent);
+
     color: var(--accent);
+
     font-weight: 700;
+
   }
 
   .student-btn .badge {
+
     background: rgba(var(--accent-rgb), 0.2);
+
     color: var(--accent);
+
     font-size: 0.75rem;
+
     padding: 0.2rem 0.5rem;
+
     border-radius: 6px;
+
   }
 
   /* 과외 자료 콘텐츠 영역 */
+
   .content-area {
+
     display: none;
+
     animation: fadeIn 0.4s ease forwards;
+
   }
 
   .content-area.active {
+
     display: block;
+
   }
 
   .content-title {
+
     font-size: 1.5rem;
+
     margin-bottom: 1.5rem;
+
     font-weight: 600;
+
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
   }
 
   .grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
     gap: 1.5rem;
+
   }
 
   .hub-card {
+
     background: var(--surface);
+
     border: 1px solid var(--border);
+
     border-radius: 16px;
+
     padding: 1.5rem;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     transition: all 0.3s ease;
+
     text-decoration: none;
+
     color: inherit;
+
     position: relative;
+
     overflow: hidden;
+
   }
 
   .hub-card::before {
+
     content: '';
+
     position: absolute;
+
     top: 0; left: 0; width: 4px; height: 100%;
+
     background: var(--accent);
+
     opacity: 0;
+
     transition: opacity 0.3s ease;
+
   }
 
   .hub-card:hover {
+
     background: var(--card);
+
     transform: translateY(-4px);
+
     border-color: rgba(var(--accent-rgb), 0.2);
+
     box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+
   }
 
   .hub-card:hover::before {
+
     opacity: 1;
+
   }
 
   .card-tag {
+
     align-self: flex-start;
+
     font-size: 0.75rem;
+
     font-weight: 600;
+
     padding: 0.25rem 0.6rem;
+
     border-radius: 6px;
+
     margin-bottom: 1rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
+
   }
 
   .tag-grammar { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
+
   .tag-exam { background: rgba(45, 212, 160, 0.15); color: #2dd4a0; }
+
   .tag-tense { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
 
   .card-name {
+
     font-size: 1.15rem;
+
     font-weight: 600;
+
     line-height: 1.4;
+
     margin-bottom: 0.75rem;
+
   }
 
   .card-desc {
+
     font-size: 0.85rem;
+
     color: var(--muted);
+
     line-height: 1.5;
+
     margin-bottom: 1.5rem;
+
   }
 
   .card-footer {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     font-size: 0.85rem;
+
     color: var(--accent);
+
     font-weight: 500;
+
   }
 
   .card-footer .arrow {
+
     transition: transform 0.2s ease;
+
   }
 
   .hub-card:hover .card-footer .arrow {
+
     transform: translateX(4px);
+
   }
 
   @keyframes fadeIn {
+
     from { opacity: 0; transform: translateY(10px); }
+
     to { opacity: 1; transform: translateY(0); }
+
   }
 
   @media (max-width: 768px) {
+
     main { grid-template-columns: 1fr; gap: 1.5rem; }
+
     .student-sidebar { flex-direction: row; overflow-x: auto; padding-bottom: 0.5rem; }
+
     .student-btn { shrink: 0; }
+
   }
+
 </style>
+
 </head>
+
 <body>
 
   <header>
+
     <h1>Class Hub</h1>
+
     <p>학생별 맞춤형 영어 과외 학습 자료 대시보드</p>
+
   </header>
 
   <main>
+
     <div class="student-sidebar">
+
       <div class="sidebar-title">Students</div>
+
       
+
       <button class="student-btn active" onclick="showStudent('sh-lee')">
+
         <span>이시현</span>
-        <span class="badge">3개 자료</span>
+
+        <span class="badge">4개 자료</span>
+
       </button>
+
     </div>
 
     <div class="main-content">
+
       
+
       <div id="sh-lee" class="content-area active">
+
         <div class="content-title">
+
           <span>이시현 학생의 학습 보관함</span>
+
         </div>
+
         
+
         <div class="grid">
+
           <a href="grammar.html" class="hub-card">
+
             <div>
+
               <div class="card-tag tag-grammar">Grammar</div>
+
               <div class="card-name">영문법 체계도</div>
+
               <div class="card-desc">문장 구조, 동사 중심 구문, 준동사, 연결/수식 및 특수 구문까지 한눈에 파악하는 시각화 문법 맵입니다.</div>
+
             </div>
+
             <div class="card-footer">
+
               <span>자료 열기</span>
+
               <span class="arrow">→</span>
+
             </div>
+
           </a>
 
           <a href="grammar_tense.html" class="hub-card">
+
             <div>
+
               <div class="card-tag tag-tense">Structure & Tense</div>
+
               <div class="card-name">영문법 — 문형 & 시제 수업교재</div>
+
               <div class="card-desc">영어 문장의 기본 틀인 5가지 문형 공식과 시간의 흐름을 지배하는 12시제 체계를 핵심 위주로 정리한 집중 교재입니다.</div>
+
             </div>
+
             <div class="card-footer">
+
               <span>자료 열기</span>
+
               <span class="arrow">→</span>
+
             </div>
+
           </a>
 
           <a href="exam2_10.html" class="hub-card">
+
             <div>
+
               <div class="card-tag tag-exam">Mock Exam</div>
+
               <div class="card-name">2025년 고2 10월 모의고사 영어 (18-32번)</div>
+
               <div class="card-desc">주요 지문별 출제 포인트, 구문/문법 블록 해석 및 핵심 단어들이 깔끔하게 정리된 내신/수능 대비 분석서입니다.</div>
+
             </div>
+
             <div class="card-footer">
+
               <span>자료 열기</span>
+
               <span class="arrow">→</span>
+
             </div>
+
           </a>
+
+          <a href="exam2_10_reading_33_45.html" class="hub-card">
+
+            <div>
+
+              <div class="card-tag tag-exam">Mock Exam</div>
+
+              <div class="card-name">2025년 고2 10월 모의고사 영어 (33-45번)</div>
+
+              <div class="card-desc">빈칸 추론, 무관문장, 순서 배열, 문장 삽입, 요약문, 제목, 어휘, 지칭 및 내용일치 문제까지 정답 근거·오답 분석·핵심 문법·어휘가 정리된 독해 심화 분석서입니다.</div>
+
+            </div>
+
+            <div class="card-footer">
+
+              <span>자료 열기</span>
+
+              <span class="arrow">→</span>
+
+            </div>
+
+          </a>
+
         </div>
+
       </div>
 
     </div>
+
   </main>
 
   <script>
+
     function showStudent(studentId) {
+
       document.querySelectorAll('.content-area').forEach(area => {
+
         area.classList.remove('active');
+
       });
+
       document.querySelectorAll('.student-btn').forEach(btn => {
+
         btn.classList.remove('active');
+
       });
 
       const targetContent = document.getElementById(studentId);
+
       if (targetContent) {
+
         targetContent.classList.add('active');
+
       }
+
       
+
       const clickedBtn = Array.from(document.querySelectorAll('.student-btn')).find(btn => {
+
         return btn.getAttribute('onclick').includes(studentId);
+
       });
+
       if (clickedBtn) {
+
         clickedBtn.classList.add('active');
+
       }
+
     }
+
   </script>
 
 </body>
+
 </html>
