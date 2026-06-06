@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025년 고2 10월 모의고사 영어 — 과외 자료 (33-45번)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #181c27;
+    --card: #1e2235;
+    --border: #2a3050;
+    --accent: #4f8aff;
+    --accent2: #7c5cfc;
+    --green: #2dd4a0;
+    --red: #ff5f72;
+    --yellow: #f5c842;
+    --orange: #ff9e4a;
+    --text: #e8eaf6;
+    --muted: #8891b4;
+    --mono: 'DM Mono', monospace;
+    --serif: 'Noto Serif KR', serif;
+    --sans: 'Outfit', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.75; font-size: 15px; }
+
+  .site-header { background: linear-gradient(135deg,#1a1f35 0%,#0f1117 60%); border-bottom: 1px solid var(--border); padding: 40px 48px; position: sticky; top: 0; z-index: 100; }
+  .site-header h1 { font-family: var(--serif); font-size: 1.15rem; color: var(--text); font-weight: 600; }
+  .site-header .meta { font-size: .75rem; color: var(--muted); margin-top: 4px; font-family: var(--mono); }
+  .badge-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .badge { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 2px 10px; font-size: .7rem; color: var(--muted); font-family: var(--mono); }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; }
+
+  .toc { margin: 36px 0 0; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+  .toc-title { font-family: var(--mono); font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 12px; }
+  .toc-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .toc-link { font-family: var(--mono); font-size: .78rem; color: var(--accent); text-decoration: none; background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 3px 12px; }
+
+  .q-block { margin-top: 48px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .q-header { background: var(--surface); padding: 18px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid var(--border); }
+  .q-num { font-family: var(--mono); font-size: 1.4rem; font-weight: 500; color: var(--accent); min-width: 36px; }
+  .q-type { font-size: .75rem; color: var(--muted); font-family: var(--mono); background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 2px 10px; }
+  .q-title { font-size: .95rem; color: var(--text); font-weight: 600; }
+  .q-body { padding: 28px; }
+
+  .passage-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 22px 26px; font-family: var(--serif); font-size: .92rem; line-height: 2; color: #d0d5f0; margin-bottom: 16px; }
+  .passage-box em { font-style: italic; }
+  .passage-box .blank { display: inline-block; border-bottom: 2px solid var(--yellow); min-width: 120px; color: var(--yellow); font-style: italic; text-align: center; }
+
+  .sub-passage { background: rgba(124,92,252,0.06); border: 1px solid rgba(124,92,252,0.2); border-radius: 8px; padding: 16px 22px; font-family: var(--serif); font-size: .88rem; line-height: 2; color: #c8bfff; margin-bottom: 8px; }
+  .sub-label { font-family: var(--mono); font-size: .7rem; color: var(--accent2); margin-bottom: 6px; }
+
+  .translation-box { background: rgba(79,138,255,.06); border: 1px solid rgba(79,138,255,.25); border-radius: 8px; padding: 18px 22px; font-size: .875rem; color: #a8b8e8; line-height: 1.9; margin-bottom: 24px; }
+
+  .section { margin-top: 28px; }
+  .section-label { font-family: var(--mono); font-size: .7rem; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .answer-block { display: flex; align-items: flex-start; gap: 16px; background: rgba(45,212,160,.08); border: 1px solid rgba(45,212,160,.3); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+  .answer-num { font-size: 1.5rem; color: var(--green); font-weight: 700; font-family: var(--mono); min-width: 28px; }
+  .answer-text { color: var(--text); font-size: .92rem; }
+  .answer-text .choice-ko { color: var(--green); font-weight: 600; }
+
+  .evidence-box { background: var(--card); border-left: 3px solid var(--green); border-radius: 0 6px 6px 0; padding: 14px 18px; font-family: var(--serif); font-size: .88rem; color: #c5d0f0; margin-bottom: 8px; line-height: 1.9; }
+  .evidence-tag { font-family: var(--mono); font-size: .65rem; color: var(--green); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; margin-top: 12px; }
+
+  .wrong-grid { display: flex; flex-direction: column; gap: 8px; }
+  .wrong-item { background: rgba(255,95,114,.06); border: 1px solid rgba(255,95,114,.2); border-radius: 6px; padding: 12px 16px; font-size: .875rem; }
+  .wrong-num { color: var(--red); font-family: var(--mono); font-weight: 600; margin-right: 8px; }
+  .wrong-item.correct-mark { border-color: rgba(45,212,160,.3); background: rgba(45,212,160,.05); }
+  .wrong-item.correct-mark .wrong-num { color: var(--green); }
+  .wrong-item.neutral { border-color: var(--border); background: rgba(255,255,255,.03); }
+  .wrong-item.neutral .wrong-num { color: var(--muted); }
+
+  .topic-box { background: rgba(124,92,252,.08); border: 1px solid rgba(124,92,252,.3); border-radius: 8px; padding: 16px 20px; font-family: var(--serif); font-size: .9rem; color: #c8bfff; line-height: 1.9; }
+
+  .flow-list { display: flex; flex-direction: column; gap: 6px; }
+  .flow-item { display: flex; align-items: flex-start; gap: 12px; font-size: .875rem; color: var(--text); }
+  .flow-icon { color: var(--accent2); font-family: var(--mono); font-size: .75rem; padding-top: 2px; min-width: 22px; }
+  .flow-arrow { color: var(--muted); margin: 0 4px; }
+
+  .grammar-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+  .grammar-title { font-family: var(--mono); font-size: .8rem; color: var(--yellow); margin-bottom: 8px; }
+  .grammar-eng { font-family: var(--serif); font-size: .88rem; color: #d8e0ff; margin-bottom: 4px; font-style: italic; }
+  .grammar-ko { font-size: .825rem; color: var(--muted); }
+
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+  .vocab-item { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; display: flex; align-items: baseline; gap: 10px; }
+  .vocab-word { font-family: var(--mono); font-size: .82rem; color: var(--accent); min-width: 80px; }
+  .vocab-meaning { font-size: .82rem; color: var(--muted); }
+
+  .order-block { display: flex; flex-direction: column; gap: 10px; }
+  .order-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; }
+  .order-label { font-family: var(--mono); font-size: .75rem; color: var(--orange); margin-bottom: 6px; }
+  .order-text { font-family: var(--serif); font-size: .87rem; color: #d0d5f0; line-height: 1.9; }
+
+  .insert-marker { display: inline-block; background: var(--yellow); color: #000; font-family: var(--mono); font-size: .75rem; border-radius: 3px; padding: 1px 7px; margin: 0 4px; font-weight: 700; }
+
+  .summary-box { background: rgba(79,138,255,.08); border: 1px solid rgba(79,138,255,.3); border-radius: 8px; padding: 18px 22px; font-size: .9rem; color: var(--text); line-height: 2; margin-bottom: 12px; }
+  .blank-ans { display: inline-block; background: rgba(45,212,160,.15); border: 1px solid var(--green); border-radius: 4px; padding: 1px 10px; color: var(--green); font-weight: 600; font-family: var(--mono); font-size: .85rem; }
+  .blank-q { display: inline-block; border-bottom: 2px dashed var(--yellow); min-width: 80px; color: var(--yellow); font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <h1>2025년 고2 10월 모의고사 영어 — 과외 참고 자료</h1>
+  <div class="meta">33번 ~ 45번 · 독해 파트</div>
+  <div class="badge-row">
+    <span class="badge">정답 + 근거</span>
+    <span class="badge">오답 분석</span>
+    <span class="badge">주제문</span>
+    <span class="badge">글의 흐름</span>
+    <span class="badge">핵심 문법</span>
+    <span class="badge">어려운 단어</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">문항 목차</div>
+    <div class="toc-links">
+      <a class="toc-link" href="#q33">33번 빈칸</a>
+      <a class="toc-link" href="#q34">34번 빈칸</a>
+      <a class="toc-link" href="#q35">35번 무관문장</a>
+      <a class="toc-link" href="#q36">36번 순서</a>
+      <a class="toc-link" href="#q37">37번 순서</a>
+      <a class="toc-link" href="#q38">38번 문장삽입</a>
+      <a class="toc-link" href="#q39">39번 문장삽입</a>
+      <a class="toc-link" href="#q40">40번 요약문</a>
+      <a class="toc-link" href="#q41">41번 제목</a>
+      <a class="toc-link" href="#q42">42번 어휘</a>
+      <a class="toc-link" href="#q43">43번 순서</a>
+      <a class="toc-link" href="#q44">44번 지칭</a>
+      <a class="toc-link" href="#q45">45번 일치</a>
+    </div>
+  </div>
+
+  <!-- ============================== Q33 ============================== -->
+  <div class="q-block" id="q33">
+    <div class="q-header">
+      <div class="q-num">33</div>
+      <div class="q-type">빈칸 추론</div>
+      <div class="q-title">다음 빈칸에 들어갈 말로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+      <div class="passage-box">
+        Historically, palaces weren't just homes; they were carefully constructed stages designed to impress and intimidate. While stone symbolized permanence and strength, glass offered something equally powerful: visibility. The introduction of large windows in palaces allowed rulers to literally look down upon their subjects, emphasizing their elevated position. Conversely, it also allowed subjects to gaze up at their leaders, creating a sense of awe and distance. Consider the Palace of Versailles: its Hall of Mirrors, lined with reflective surfaces, not only magnified the grandeur of the space but also placed the king at the center of a dazzling display, reinforcing his absolute authority. The use of glass in palaces wasn't merely aesthetic; it was strategic. Open sightlines allowed for better surveillance and control, ensuring the safety and security of the ruling family. Courtiers and visitors were constantly aware of being observed, contributing to an atmosphere of careful obedience and respect. The very architecture dictated social behavior, with glass <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+      </div>
+      <div class="translation-box">
+        역사적으로 궁전은 단순한 집이 아니었다. 인상을 주고 위압하도록 설계된 정교한 무대였다. 돌이 영속성과 강함을 상징했다면, 유리는 동등하게 강력한 무언가를 제공했다: 바로 가시성이다. 궁전에 큰 창문을 도입함으로써 통치자들은 말 그대로 신하들을 내려다볼 수 있었고, 자신의 격상된 위치를 강조했다. 반대로, 신하들도 지도자를 올려다볼 수 있어 경외감과 거리감을 만들었다. 베르사유 궁전을 생각해 보라: 반사 표면으로 늘어선 거울의 방은 공간의 웅장함을 배가시켰을 뿐 아니라, 왕을 화려한 전시의 중심에 놓아 그의 절대적 권위를 강화했다. 궁전에서 유리의 사용은 단순히 미학적인 것이 아니었다. 전략적이었다. 열린 시야는 더 나은 감시와 통제를 가능하게 했다. 신하들과 방문객들은 항상 관찰당하고 있다는 것을 의식했고, 이는 조심스러운 복종과 존중의 분위기를 만들었다. 건축 자체가 사회적 행동을 규정했으며, 유리는 <span style="color:var(--green);font-weight:600">[권력 역학의 조용한 집행자 역할을 하면서]</span>.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">①</div>
+          <div class="answer-text"><span class="choice-ko">acting as a silent enforcer of the power dynamic<br>(권력 역학의 조용한 집행자로 작용하면서)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거</div>
+        <div class="evidence-box">
+          • "The very architecture <strong>dictated social behavior</strong>" → 건축이 행동을 규정<br>
+          • "Courtiers were constantly aware of being <strong>observed</strong>" → 관찰당하는 의식 → 복종<br>
+          • "Open sightlines allowed for better <strong>surveillance and control</strong>" → 감시·통제<br>
+          → 유리 자체가 말없이(silent) 권력 구조(power dynamic)를 강제(enforce)하는 역할
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item correct-mark"><span class="wrong-num">①</span><span style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span style="color:#c0c8e0">serving as a tool for a king to reflect on himself — 왕의 자기 성찰 도구? 유리는 신하를 통제하는 수단. 방향이 반대.</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span style="color:#c0c8e0">opening the king's eyes to his subjects' hardships — 신하의 고충을 파악하는 도구? 글 어디에도 없음.</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span style="color:#c0c8e0">offering the ruler a window and the ruled a mirror — 통치자에게 창, 피통치자에게 거울? 글의 핵심(권력 강화·통제)과 무관한 문학적 표현.</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">representing a bridge between the king and the public — 소통의 다리? 이 글은 권력 격차·위계를 강조하지 소통 강조 아님.</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"The use of glass in palaces wasn't merely aesthetic; it was strategic."<br><span style="color:var(--muted);font-size:.82rem">→ 글 전체의 핵심 주장. 앞뒤 내용이 모두 이 문장을 뒷받침함.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>궁전 = 인상·위압의 무대 (배경)</div>
+          <div class="flow-item"><div class="flow-icon">02</div>돌 = 영속성, 유리 = 가시성(visibility) (유리의 특성)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>창문 → 통치자가 내려다봄 / 신하가 올려다봄 (위계 강조)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>베르사유 거울의 방 → 절대 권위 강화 (구체 사례)</div>
+          <div class="flow-item"><div class="flow-icon">05</div>유리 = 전략적 = 감시·통제 (핵심 주장)</div>
+          <div class="flow-item"><div class="flow-icon">06</div>신하들 → 관찰 의식 → 복종 분위기 → <strong>유리 = 권력 집행자</strong> (결론)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">분사구문 (부대상황)</div>
+          <div class="grammar-eng">"...allowed rulers to look down upon their subjects, <u>emphasizing their elevated position</u>"</div>
+          <div class="grammar-ko">주절 결과로 이어지는 분사구문. "그리하여 ~을 강조하면서"</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">not merely A; B (강조 대조)</div>
+          <div class="grammar-eng">"The use of glass wasn't <u>merely aesthetic</u>; it was <u>strategic</u>."</div>
+          <div class="grammar-ko">단순히 A가 아니라 B다. 수능 빈칸 문제에서 핵심 논리 제시 패턴.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">intimidate</div><div class="vocab-meaning">위압하다, 겁주다</div></div>
+          <div class="vocab-item"><div class="vocab-word">permanence</div><div class="vocab-meaning">영속성, 불변성</div></div>
+          <div class="vocab-item"><div class="vocab-word">surveillance</div><div class="vocab-meaning">감시</div></div>
+          <div class="vocab-item"><div class="vocab-word">grandeur</div><div class="vocab-meaning">웅장함, 장엄함</div></div>
+          <div class="vocab-item"><div class="vocab-word">dazzling</div><div class="vocab-meaning">눈부신, 화려한</div></div>
+          <div class="vocab-item"><div class="vocab-word">courtier</div><div class="vocab-meaning">신하, 조신</div></div>
+          <div class="vocab-item"><div class="vocab-word">obedience</div><div class="vocab-meaning">복종, 순종</div></div>
+          <div class="vocab-item"><div class="vocab-word">enforcer</div><div class="vocab-meaning">집행자, 강제하는 것</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q34 ============================== -->
+  <div class="q-block" id="q34">
+    <div class="q-header">
+      <div class="q-num">34</div>
+      <div class="q-type">빈칸 추론</div>
+      <div class="q-title">다음 빈칸에 들어갈 말로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+      <div class="passage-box">
+        As a political researcher in Germany, Noelle-Neumann observed that during election campaigns, certain views seemed to get more play than others, and sometimes people muted their opinions rather than talking about them, especially if those opinions were perceived to be unpopular. Noelle-Neumann calls this the spiral of silence. The spiral of silence occurs when <strong>individuals who perceive that their opinions are popular express them, whereas those who do not think their opinions are popular remain quiet.</strong> This process occurs in a spiral, so that one side of an issue ends up with considerable publicity and the other side with very little. In everyday life, people express their opinions in a variety of ways: they talk about them, they wear buttons, they put bumper stickers on their cars, and they post their views on social media. According to this theory, people are more apt to do these kinds of things when <span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.
+      </div>
+      <div class="translation-box">
+        독일의 정치 연구자 Noelle-Neumann은 선거 운동 기간에 특정 견해들이 다른 것들보다 더 많이 알려지는 경향이 있고, 사람들이 자신의 의견이 비인기적인 것으로 여겨질 경우 그것에 대해 말하기보다 침묵하는 경우가 있다고 관찰했다. Noelle-Neumann은 이것을 '침묵의 나선'이라고 부른다. 침묵의 나선은 <strong>자신의 의견이 인기 있다고 인식하는 사람들은 그것을 표현하고, 그렇지 않다고 생각하는 사람들은 조용히 있을 때</strong> 발생한다. 이 과정은 나선 형태로 일어나, 한 쪽 의견은 상당한 공론화를 얻고 다른 쪽은 거의 얻지 못하게 된다. 일상에서 사람들은 다양한 방법으로 의견을 표현한다. 이론에 따르면, 사람들은 <span style="color:var(--green);font-weight:600">[다른 사람들이 자신의 의견을 공유한다고 인식할 때]</span> 이런 행동들을 더 하는 경향이 있다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">they perceive that others share their opinions<br>(다른 사람들이 자신의 의견을 공유한다고 인식할 때)</span></div>
+        </div>
+        <div class="evidence-tag">정답 근거 — 직접 대응 문장</div>
+        <div class="evidence-box">
+          "<strong>individuals who perceive that their opinions are popular</strong> express them, whereas those who do not think their opinions are popular <strong>remain quiet</strong>."<br>
+          → 빈칸 = "언제 의견을 표현하는가?" → 자신의 의견이 인기 있다(= 남들도 공유한다)고 인식할 때
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span style="color:#c0c8e0">beliefs begin to conflict with expertise — 전문 지식과 충돌할 때? 글에 없는 내용.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">②</span><span style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span style="color:#c0c8e0">they evolve to become tolerant towards criticism — 비판에 관대해질 때? 관련 없음.</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span style="color:#c0c8e0">they feel only breaking the silence can change the game — 침묵을 깨야만 한다고 느낄 때? 오히려 이 이론의 반대. 인기 없다고 느끼면 침묵함.</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">their opposite opinion becomes more dominant — 반대 의견이 우세해질 때? 이 경우 침묵하는 상황 (이론에 반대)</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문 (정의)</div>
+        <div class="topic-box">"The spiral of silence occurs when individuals who perceive that their opinions are popular express them, whereas those who do not think their opinions are popular remain quiet."</div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>관찰: 선거 기간, 특정 의견만 알려지고 일부는 침묵</div>
+          <div class="flow-item"><div class="flow-icon">02</div>이론 명칭: 침묵의 나선 (spiral of silence)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>정의: 인기 있다 인식 → 표현 / 비인기 인식 → 침묵</div>
+          <div class="flow-item"><div class="flow-icon">04</div>결과: 나선 구조 → 한쪽 의견만 공론화</div>
+          <div class="flow-item"><div class="flow-icon">05</div>일상 표현 방법 나열 (버튼, 범퍼 스티커, SNS)</div>
+          <div class="flow-item"><div class="flow-icon">06</div>결론: 남들도 공유한다고 인식할 때 더 표현 (빈칸)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">whereas (대조 접속사)</div>
+          <div class="grammar-eng">"individuals who perceive their opinions are popular express them, <u>whereas</u> those who do not remain quiet."</div>
+          <div class="grammar-ko">whereas: ~인 반면에. while과 유사한 대조 접속사.</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">be apt to-v (~하는 경향이 있다)</div>
+          <div class="grammar-eng">"people are more <u>apt to</u> do these kinds of things when..."</div>
+          <div class="grammar-ko">be apt to = tend to = be likely to. 수능 자주 출제 표현.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">mute</div><div class="vocab-meaning">침묵하다, 억누르다</div></div>
+          <div class="vocab-item"><div class="vocab-word">spiral</div><div class="vocab-meaning">나선, 점점 심해지는 과정</div></div>
+          <div class="vocab-item"><div class="vocab-word">considerable</div><div class="vocab-meaning">상당한</div></div>
+          <div class="vocab-item"><div class="vocab-word">publicity</div><div class="vocab-meaning">공론화, 알려짐</div></div>
+          <div class="vocab-item"><div class="vocab-word">bumper sticker</div><div class="vocab-meaning">자동차 범퍼 스티커</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q35 ============================== -->
+  <div class="q-block" id="q35">
+    <div class="q-header">
+      <div class="q-num">35</div>
+      <div class="q-type">전체 흐름과 무관한 문장</div>
+      <div class="q-title">다음 글에서 전체 흐름과 관계 없는 문장은?</div>
+    </div>
+    <div class="q-body">
+      <div class="passage-box">
+        Consider units of measure, one kind of descriptive device we are familiar with using in physics. Spatial distances can be given in terms of feet or meters or some other unit, and the physics will be the same regardless. ① We conclude from this that physics does not prefer one unit of length over any other, and we may choose any one we like for reasons of convenience. ② We further conclude that any feature depending on that choice, such as the particular numerical value assigned to the spatial separation between two locations, is not out there in the world apart from a choice of unit. ③ Temperatures can likewise be given in terms of the Fahrenheit or Celsius or Kelvin scale, and nothing in the physics changes when we switch from one scale to another. <span style="background:rgba(255,95,114,0.12);border:1px solid var(--red);border-radius:4px;padding:2px 6px;">④ Perception of temperature can vary with humidity and wind, even at the same measured value.</span> ⑤ We conclude that the choice of scale is an arbitrary choice in description, and that any feature that depends on that choice is scale-dependent.
+      </div>
+      <div class="translation-box">
+        물리학에서 익숙하게 사용하는 일종의 서술 장치인 측정 단위를 생각해 보라. 공간적 거리는 피트나 미터 등 다른 단위로 나타낼 수 있으며, 물리학은 어느 쪽이든 동일하다. ① 이로부터 물리학은 어떤 길이 단위도 선호하지 않으며, 편의를 위해 어느 것이든 선택할 수 있다고 결론 내린다. ② 단위 선택에 따라 달라지는 특성, 예를 들어 두 위치 간의 공간적 분리에 할당된 수치는 단위 선택을 떠나 세상에 실제로 존재하는 것이 아니라고 추가 결론 내린다. ③ 온도 역시 화씨, 섭씨, 켈빈 척도로 나타낼 수 있으며, 한 척도에서 다른 척도로 바꿔도 물리학에서 달라지는 것은 없다. <span style="color:var(--red)">④ 온도에 대한 인식은 같은 측정값이어도 습도와 바람에 따라 달라질 수 있다.</span> ⑤ 척도의 선택은 서술에서 임의적 선택이며, 그 선택에 의존하는 특성은 척도에 의존적이라는 결론을 내린다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">"Perception of temperature can vary with humidity and wind, even at the same measured value."<br>(온도 인식이 습도·바람에 따라 달라진다)</span></div>
+        </div>
+        <div class="evidence-tag">글의 핵심 주제</div>
+        <div class="evidence-box">
+          이 글의 주제: <strong>측정 단위·척도는 임의적 선택이며, 단위를 바꿔도 물리적 사실 자체는 변하지 않는다.</strong><br>
+          ①②③⑤는 모두 "단위/척도 선택의 임의성"에 대한 내용.<br>
+          ④는 "습도·바람에 따라 체감온도가 다르다"는 내용 → 척도 임의성이 아닌 <strong>환경 요소에 따른 체감 변화</strong> → 주제 이탈
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">선지별 연결 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item neutral"><span class="wrong-num">①</span><span style="color:#c0c8e0">어느 단위든 선택 가능 → 주제(단위 임의성) 직결 ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">②</span><span style="color:#c0c8e0">수치 값은 단위 선택에 따라 달라짐 → 주제 직결 ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">③</span><span style="color:#c0c8e0">온도 척도(화씨/섭씨/켈빈)도 마찬가지 → 주제 확장 ✓</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span style="color:var(--red)">습도·바람에 따른 체감온도 변화 → 척도 임의성과 무관 ✗ <strong>정답</strong></span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">척도는 임의적 선택, 척도 의존적 특성 → 결론 ✓</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 주제문</div>
+        <div class="topic-box">"We conclude that the choice of scale is an arbitrary choice in description, and that any feature that depends on that choice is scale-dependent."<br><span style="color:var(--muted);font-size:.82rem">→ 마지막 문장이 전체 결론. 모든 내용이 이를 향해 흘러감.</span></div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">descriptive</div><div class="vocab-meaning">서술적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">spatial</div><div class="vocab-meaning">공간의, 공간적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">arbitrary</div><div class="vocab-meaning">임의적인, 자의적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">scale-dependent</div><div class="vocab-meaning">척도에 의존하는</div></div>
+          <div class="vocab-item"><div class="vocab-word">Fahrenheit / Celsius</div><div class="vocab-meaning">화씨 / 섭씨</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q36 ============================== -->
+  <div class="q-block" id="q36">
+    <div class="q-header">
+      <div class="q-num">36</div>
+      <div class="q-type">글의 순서 [3점]</div>
+      <div class="q-title">주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+      <div class="sub-label">주어진 글 (도입)</div>
+      <div class="passage-box">Even though sea creatures live in it, they still need to take in water for their bodies to function properly.</div>
+      <div class="order-block">
+        <div class="order-item">
+          <div class="order-label">(A)</div>
+          <div class="order-text">Notice that it has increased in size. The same principle applies to sea creatures. If the body fluids in a sea animal are saltier than the seawater it lives in, then the extra salt in the creature's body will absorb seawater. This can cause them to swell up.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(B)</div>
+          <div class="order-text">On the other hand, if the amount of salt in the seawater is higher than the amount of salt in the body fluids of a sea animal, the extra salt in the water will draw fluids out of the creature's body, causing it to dehydrate and shrink.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(C)</div>
+          <div class="order-text">They just need to get rid of any extra salt it might bring with it. Salt absorbs water like a sponge. If you put a tiny mountain of salt on a small plate, then add enough water to the side, making sure an edge touches the salt, the salt will absorb the water. Now you have a pile of wet salt.</div>
+        </div>
+      </div>
+      <div class="translation-box">
+        <strong>도입:</strong> 바다 생물들은 바닷속에 살더라도, 신체가 제대로 기능하려면 여전히 물을 섭취해야 한다.<br><br>
+        <strong>(A):</strong> 그것이 크기가 커진 것을 확인하라. 같은 원리가 바다 생물에게 적용된다. 바다 동물의 체액이 사는 바닷물보다 더 짜다면, 동물 몸 속의 여분의 염분이 바닷물을 흡수할 것이다. 이로 인해 부풀어 오를 수 있다.<br><br>
+        <strong>(B):</strong> 반면에, 바닷물의 염분량이 바다 동물 체액의 염분량보다 높으면, 물 속의 여분의 염분이 동물 체내의 수분을 끌어당겨 탈수되고 수축하게 된다.<br><br>
+        <strong>(C):</strong> 그들은 단지 그것이 가져오는 여분의 염분을 제거하기만 하면 된다. 염분은 스펀지처럼 물을 흡수한다. 작은 접시 위에 염분 더미를 올리고 한쪽 가장자리가 염분에 닿도록 물을 충분히 추가하면, 염분이 물을 흡수할 것이다. 이제 젖은 염분 더미가 생긴다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">(C) - (A) - (B)</span></div>
+        </div>
+        <div class="evidence-tag">순서 논리</div>
+        <div class="evidence-box">
+          도입: 바다 생물은 물을 섭취해야 함<br>
+          → <strong>(C)</strong>: "They just need to get rid of any extra salt" → 도입에 이어지는 설명 + 소금이 물 흡수하는 원리 실험(일반 원리 설명)<br>
+          → <strong>(A)</strong>: "Notice that it has increased in size" → (C)의 실험 결과 확인 언급 + "같은 원리가 바다 생물에 적용" (몸이 더 짤 때 → 물 흡수 → 부풀음)<br>
+          → <strong>(B)</strong>: "On the other hand" → 반대 상황 (바닷물이 더 짤 때 → 탈수 → 수축)
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">연결 단서</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">→</div>(C) "They just need to get rid of extra salt" — 도입의 "take in water"와 자연스럽게 연결</div>
+          <div class="flow-item"><div class="flow-icon">→</div>(A) "Notice that it has increased in size" — (C)의 소금 실험 결과 확인, "The same principle applies"로 연결</div>
+          <div class="flow-item"><div class="flow-icon">→</div>(B) "On the other hand" — (A)의 반대 상황 제시</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">swell up</div><div class="vocab-meaning">부풀어 오르다</div></div>
+          <div class="vocab-item"><div class="vocab-word">dehydrate</div><div class="vocab-meaning">탈수되다, 수분이 빠지다</div></div>
+          <div class="vocab-item"><div class="vocab-word">shrink</div><div class="vocab-meaning">수축하다, 줄어들다</div></div>
+          <div class="vocab-item"><div class="vocab-word">body fluids</div><div class="vocab-meaning">체액</div></div>
+          <div class="vocab-item"><div class="vocab-word">sponge</div><div class="vocab-meaning">스펀지</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q37 ============================== -->
+  <div class="q-block" id="q37">
+    <div class="q-header">
+      <div class="q-num">37</div>
+      <div class="q-type">글의 순서</div>
+      <div class="q-title">주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+      <div class="sub-label">주어진 글 (도입)</div>
+      <div class="passage-box">Distinguishing moths from butterflies on outward appearance is not always easy, but there are a few rules of thumb that can help.</div>
+      <div class="order-block">
+        <div class="order-item">
+          <div class="order-label">(A)</div>
+          <div class="order-text">Further distinctions can be made by looking for a tiny hook that joins fore- and hindwings, a feature only present in moths. The stereotypical differences, with moths cast as the gloomy, nocturnal cousins of colourful sun-loving butterflies are simply wrong. There are many brightly coloured moths and many which are active throughout the day.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(B)</div>
+          <div class="order-text">In most butterflies the antennae end with a small club-shaped swelling, whereas in moths they are usually feathery or narrow to a fine tip. Butterflies tend to rest with their wings held shut above their body, whereas moths more usually rest with the upper sides of the wings on full view.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(C)</div>
+          <div class="order-text">Equally, there are a few nocturnal butterflies and plenty that come clothed in shades of brown and grey. It's more sensible to think of them together; both butterflies and moths are beautiful and fascinating insects.</div>
+        </div>
+      </div>
+      <div class="translation-box">
+        <strong>도입:</strong> 겉모습으로 나방과 나비를 구별하는 것은 항상 쉽지 않지만, 도움이 되는 몇 가지 경험 법칙이 있다.<br><br>
+        <strong>(B):</strong> 대부분의 나비는 더듬이 끝이 작은 곤봉 모양으로 부풀어 있는 반면, 나방은 보통 깃털 모양이거나 가는 끝으로 좁아진다. 나비는 날개를 몸 위에 접어서 쉬는 경향이 있는 반면, 나방은 날개 윗면이 완전히 보이게 쉰다.<br><br>
+        <strong>(A):</strong> 나방에만 있는 앞날개와 뒷날개를 연결하는 작은 갈고리를 찾아 추가 구별을 할 수 있다. 나방을 화려한 나비의 어둡고 야행성인 친척으로 보는 고정관념적 차이는 단순히 틀렸다. 밝은 색의 나방도 많고 낮에 활동하는 것도 많다.<br><br>
+        <strong>(C):</strong> 마찬가지로, 야행성 나비도 있고 갈색과 회색 계통 색상의 나비도 많다. 이들을 함께 생각하는 것이 더 합리적이다. 나비와 나방 모두 아름답고 매혹적인 곤충이다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">②</div>
+          <div class="answer-text"><span class="choice-ko">(B) - (A) - (C)</span></div>
+        </div>
+        <div class="evidence-tag">순서 논리</div>
+        <div class="evidence-box">
+          도입: 나방과 나비 구별 어렵지만 법칙이 있다<br>
+          → <strong>(B)</strong>: 구체적 구별법 제시 (더듬이 모양, 날개 휴식 자세)<br>
+          → <strong>(A)</strong>: "Further distinctions" → 추가 구별법 + 고정관념 반박 (밝은 나방, 낮에 활동하는 나방 많음)<br>
+          → <strong>(C)</strong>: "Equally, there are nocturnal butterflies..." → (A)의 반박에 동조하며 확장 → "함께 생각하는 것이 합리적" (결론)
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">연결 단서</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">→</div>(B) 도입의 "rules of thumb"에 직접 해당하는 첫 번째 구별법</div>
+          <div class="flow-item"><div class="flow-icon">→</div>(A) "Further distinctions" — (B)에 이은 추가 구별법</div>
+          <div class="flow-item"><div class="flow-icon">→</div>(C) "Equally" — (A)의 내용(고정관념 반박)을 받아 결론으로 마무리</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">rule of thumb</div><div class="vocab-meaning">경험 법칙, 어림셈</div></div>
+          <div class="vocab-item"><div class="vocab-word">antennae</div><div class="vocab-meaning">더듬이 (antenna의 복수)</div></div>
+          <div class="vocab-item"><div class="vocab-word">club-shaped</div><div class="vocab-meaning">곤봉 모양의</div></div>
+          <div class="vocab-item"><div class="vocab-word">feathery</div><div class="vocab-meaning">깃털 같은</div></div>
+          <div class="vocab-item"><div class="vocab-word">nocturnal</div><div class="vocab-meaning">야행성의</div></div>
+          <div class="vocab-item"><div class="vocab-word">stereotypical</div><div class="vocab-meaning">고정관념적인</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q38 ============================== -->
+  <div class="q-block" id="q38">
+    <div class="q-header">
+      <div class="q-num">38</div>
+      <div class="q-type">문장 삽입</div>
+      <div class="q-title">글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</div>
+    </div>
+    <div class="q-body">
+      <div class="sub-label">삽입할 문장</div>
+      <div class="evidence-box" style="border-left-color:var(--orange)">
+        "Other populations may not be actively managed, like those in national parks."<br>
+        <span style="color:var(--muted);font-size:.82rem">(국립공원과 같이 적극적으로 관리되지 않는 개체군도 있다.)</span>
+      </div>
+      <div class="passage-box">
+        There are numerous ways wildlife is managed, but they all imply stewardship and can be classified into two broad categories: active management and inactive management. ( ① ) Active management does something to the population ― such as increasing or decreasing its size ― in a direct manner through strategies like translocations or hunting, respectively. ( ② ) Populations can also be actively managed by altering the habitat to the benefit or disadvantage of a population. ( ③ ) If population numbers are too low for the goal of management agencies, other active management can be incorporated, such as predator control to minimize neonatal deaths or habitat improvement to provide required cover for neonates from predators. ( ④ ) These efforts represent active approaches to management. ( ⑤ ) In such situations, management activities minimize external influences on populations and habitat, which often involves management of humans and not animals.
+      </div>
+      <div class="translation-box">
+        야생 동물을 관리하는 방법은 수없이 많지만, 모두 관리 책임을 내포하며 두 가지 광범위한 범주로 분류될 수 있다: 적극적 관리와 소극적 관리. (①) 적극적 관리는 이동 배치나 사냥 등의 전략을 통해 개체군의 크기를 늘리거나 줄이는 등 직접적인 방식으로 개체군에 무언가를 한다. (②) 개체군에 이익이나 불이익이 되도록 서식지를 변경함으로써도 적극적으로 관리할 수 있다. (③) 관리 기관의 목표에 비해 개체수가 너무 낮으면, 갓 태어난 동물의 죽음을 최소화하기 위한 포식자 통제나 서식지 개선과 같은 다른 적극적 관리를 포함할 수 있다. (④) 이러한 노력은 관리에 대한 적극적 접근법을 나타낸다. <span style="color:var(--orange);font-weight:600">→ [삽입 문장: 국립공원처럼 적극적으로 관리되지 않는 개체군도 있다.]</span> (⑤) 이런 상황에서 관리 활동은 개체군과 서식지에 대한 외부 영향을 최소화하며, 이는 종종 동물이 아닌 인간을 관리하는 것을 포함한다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">④번 뒤에 삽입</span></div>
+        </div>
+        <div class="evidence-tag">삽입 근거</div>
+        <div class="evidence-box">
+          ④ 바로 앞: "These efforts represent <strong>active approaches</strong> to management." → 적극적 관리의 마무리<br>
+          삽입 문장: "Other populations may <strong>not be actively managed</strong>" → active → inactive 전환점<br>
+          ⑤ 바로 뒤: "In <strong>such situations</strong>, management activities minimize external influences" → '그런 상황(= 비관리 상황)'을 설명 → 삽입 문장의 "such situations"이 됨
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">01</div>야생동물 관리 = 적극적 관리 + 소극적 관리 두 범주</div>
+          <div class="flow-item"><div class="flow-icon">02</div>적극적 관리: 직접 개입 (이동 배치, 사냥, 서식지 변경)</div>
+          <div class="flow-item"><div class="flow-icon">03</div>적극적 관리 추가 예시 (포식자 통제, 서식지 개선)</div>
+          <div class="flow-item"><div class="flow-icon">04</div>"이것들이 적극적 관리" → <strong>[삽입: 소극적 관리 사례 언급]</strong></div>
+          <div class="flow-item"><div class="flow-icon">05</div>소극적 관리: 외부 영향 최소화, 인간 관리가 핵심</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">stewardship</div><div class="vocab-meaning">관리 책임</div></div>
+          <div class="vocab-item"><div class="vocab-word">translocation</div><div class="vocab-meaning">(동물) 이동 배치</div></div>
+          <div class="vocab-item"><div class="vocab-word">neonatal</div><div class="vocab-meaning">갓 태어난, 신생의</div></div>
+          <div class="vocab-item"><div class="vocab-word">predator</div><div class="vocab-meaning">포식자</div></div>
+          <div class="vocab-item"><div class="vocab-word">incorporate</div><div class="vocab-meaning">포함하다, 통합하다</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q39 ============================== -->
+  <div class="q-block" id="q39">
+    <div class="q-header">
+      <div class="q-num">39</div>
+      <div class="q-type">문장 삽입 [3점]</div>
+      <div class="q-title">글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</div>
+    </div>
+    <div class="q-body">
+      <div class="sub-label">삽입할 문장</div>
+      <div class="evidence-box" style="border-left-color:var(--orange)">
+        "Those who supported the idea that waste is necessary to drive demand failed to realize that prioritizing the elimination of waste via repair and remanufacturing creates a different kind of demand: products as a service."<br>
+        <span style="color:var(--muted);font-size:.82rem">(낭비가 수요를 이끄는 데 필요하다는 아이디어를 지지했던 사람들은, 수리·재제조를 통한 낭비 제거를 우선시하면 다른 종류의 수요인 '서비스로서의 제품'을 만들어낸다는 것을 깨닫지 못했다.)</span>
+      </div>
+      <div class="passage-box">
+        Waste has historically been seen as a necessary driver of the economy. Sales are tied to the amount of a product supplied, which is directly dependent on the demand for that product. ( ① ) Therefore, if you design the product to eventually be wasted, you can ensure that the demand for more products will be sustained. ( ② ) Many strategies have been incorporated into product design and use to ensure that waste is inevitable, such as planned obsolescence, limited access to tools for repairs, and use of cheap materials. ( ③ ) All these strategies ensure that the consumer will have limited access to the product in use and will eventually require a replacement. ( ④ ) Through this setup, companies simply lease out products that were once sold directly to the customer. ( ⑤ ) With this transition of ownership, companies maintain profit by offering maintenance and repair services and are encouraged to develop long-lasting products.
+      </div>
+      <div class="translation-box">
+        낭비는 역사적으로 경제의 필수적인 동인으로 여겨졌다. 판매는 공급되는 제품의 양과 연결되며, 이는 직접적으로 그 제품에 대한 수요에 달려 있다. (①) 따라서 제품이 결국 낭비되도록 설계하면, 더 많은 제품에 대한 수요가 지속될 것을 보장할 수 있다. (②) 계획적 노후화, 수리 도구 접근 제한, 저렴한 재료 사용 등 낭비가 불가피하도록 많은 전략이 제품 설계에 포함되었다. (③) 이 모든 전략은 소비자가 사용 중인 제품에 대한 접근이 제한되고 결국 교체를 필요로 하도록 보장한다. (④) <span style="color:var(--orange);font-weight:600">→ [삽입: 낭비 지지론자들은 수리·재제조가 '서비스로서의 제품' 수요를 창출함을 인식 못함]</span> 이러한 설정을 통해, 기업들은 한때 고객에게 직접 판매했던 제품을 단순히 임대한다. (⑤) 소유권의 이 전환으로, 기업들은 유지보수 및 수리 서비스를 제공하여 이익을 유지하고 오래 가는 제품을 개발하도록 장려된다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">④번 뒤에 삽입</span></div>
+        </div>
+        <div class="evidence-tag">삽입 근거</div>
+        <div class="evidence-box">
+          ①~④ 까지: 낭비 = 수요 유지 전략 (기존 패러다임 설명)<br>
+          삽입 문장: "failed to realize... creates a different kind of demand: <strong>products as a service</strong>" → 기존 관점 반박 + 새 개념 도입<br>
+          ⑤ 바로 뒤: "Through <strong>this setup</strong>" → '이 설정(= products as a service)'을 받아 임대 모델 설명<br>
+          → 삽입 문장이 없으면 ⑤의 "this setup"이 무엇인지 불명확해짐
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">글의 흐름 (대전환 구조)</div>
+        <div class="flow-list">
+          <div class="flow-item"><div class="flow-icon">A</div><strong>기존 패러다임:</strong> 낭비 = 경제 동인 → 제품 낭비되도록 설계 → 수요 지속</div>
+          <div class="flow-item"><div class="flow-icon">→</div>구체 전략: 계획적 노후화, 수리 도구 제한, 저렴한 재료</div>
+          <div class="flow-item"><div class="flow-icon">→</div>결과: 소비자는 결국 교체 필요</div>
+          <div class="flow-item"><div class="flow-icon">B</div><strong>[삽입] 반박:</strong> 수리·재제조 우선화 → "서비스로서의 제품" 수요 창출 가능</div>
+          <div class="flow-item"><div class="flow-icon">→</div><strong>새 패러다임:</strong> 기업이 제품 임대 → 유지보수 서비스로 수익 → 오래 가는 제품 개발</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">obsolescence</div><div class="vocab-meaning">노후화, 쓸모없게 됨</div></div>
+          <div class="vocab-item"><div class="vocab-word">inevitable</div><div class="vocab-meaning">불가피한, 필연적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">remanufacturing</div><div class="vocab-meaning">재제조</div></div>
+          <div class="vocab-item"><div class="vocab-word">lease out</div><div class="vocab-meaning">임대하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">transition</div><div class="vocab-meaning">전환, 이행</div></div>
+          <div class="vocab-item"><div class="vocab-word">long-lasting</div><div class="vocab-meaning">오래 지속되는</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q40 ============================== -->
+  <div class="q-block" id="q40">
+    <div class="q-header">
+      <div class="q-num">40</div>
+      <div class="q-type">요약문 완성 [3점]</div>
+      <div class="q-title">다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</div>
+    </div>
+    <div class="q-body">
+      <div class="passage-box">
+        Viewing time as a purchasable and consistent product cemented artificial views on time into our psyche, but every now and again we are forced to acknowledge this mistake. On twenty-six occasions in the last fifty years, a second has been added to everyone's day to adjust for the Earth wobbling and the rate of its spin changing. For instance, when El Niño, a climatic system in the Pacific, causes wind speed to change dramatically, it can slow the rotation of the Earth slightly. Indeed, the Earth's spin is generally slowing because the moon's gravity is acting as a drag, so days are getting longer by about 1.7 milliseconds per century. Such events disturb the similarity between man-made time and more flexible time based on the Earth's naturally occurring rotation. When events like this happen, a bunch of humans make the decision to add a small slice of time to your day, without your knowledge. We try to force our fixed, man-made view of time on to nature in the false hope that it will yield. It doesn't.
+      </div>
+      <div class="translation-box">
+        시간을 구매 가능하고 일정한 제품으로 보는 것은 인위적인 시간관을 우리 정신에 굳혔지만, 우리는 종종 이 실수를 인정할 수밖에 없다. 지난 50년간 26번, 지구의 흔들림과 자전 속도 변화를 조정하기 위해 모든 사람의 하루에 1초가 추가되었다. 예를 들어 태평양의 기후 시스템인 엘니뇨가 풍속을 급격히 변화시키면 지구 자전을 약간 늦출 수 있다. 실제로 달의 중력이 저항으로 작용하기 때문에 지구 자전은 일반적으로 느려지고 있으며, 하루가 매 세기 약 1.7밀리초씩 길어지고 있다. 이런 사건들은 인공 시간과 지구의 자연 자전에 기반한 더 유연한 시간 사이의 유사성을 방해한다. 이런 일이 발생하면, 여러분이 모르는 사이에 인간들이 여러분의 하루에 짧은 시간을 추가하는 결정을 내린다. 우리는 자연이 굴복할 것이라는 잘못된 희망으로 고정되고 인위적인 시간관을 자연에 강요하려 한다. 그러나 자연은 굴복하지 않는다.
+      </div>
+
+      <div class="sub-label">요약문</div>
+      <div class="summary-box">
+        Humans, who have long viewed that time is <span class="blank-q">(A)</span>, have continuously made modifications, sticking to their belief that their efforts can <span class="blank-q">(B)</span> the gap between man-made time and natural time.
+      </div>
+
+      <div class="section">
+        <div class="section-label">정답</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text">
+            (A) <span class="blank-ans">stable</span> &nbsp;…&nbsp; (B) <span class="blank-ans">eliminate</span>
+          </div>
+        </div>
+        <div class="evidence-tag">(A) stable 근거</div>
+        <div class="evidence-box">
+          "Viewing time as a <strong>purchasable and consistent product</strong>" → 시간을 일관된(consistent), 고정된 것으로 봄<br>
+          "our <strong>fixed</strong>, man-made view of time" → stable(안정적·고정된) ✓<br>
+          variable(가변적)이 아니라 fixed/consistent → <strong>stable</strong>
+        </div>
+        <div class="evidence-tag">(B) eliminate 근거</div>
+        <div class="evidence-box">
+          "We try to force our fixed view of time on to nature in the <strong>false hope that it will yield</strong>" → 인공 시간과 자연 시간의 격차를 없애려(eliminate) 하는 헛된 희망<br>
+          "a second has been added... to <strong>adjust</strong>" → 격차를 조정·제거하려는 시도 → <strong>eliminate</strong> ✓
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">오답 분석</div>
+        <div class="wrong-grid">
+          <div class="wrong-item"><span class="wrong-num">①</span><span style="color:#c0c8e0">variable … cause — 인간은 시간을 가변적으로 보지 않음. cause(야기하다)도 문맥에 안 맞음.</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span style="color:#c0c8e0">stable … highlight — highlight(부각시키다)? 격차를 줄이려는 것이지 부각이 아님.</span></div>
+          <div class="wrong-item"><span class="wrong-num">③</span><span style="color:#c0c8e0">variable … maintain — 가변적으로 보지도 않고, 격차를 유지하려는 것도 아님.</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">④</span><span style="color:var(--green)">정답: stable … eliminate</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">relative … narrow — narrow(좁히다)는 일부 맞지만, relative(상대적)는 글의 논지(고정적·인공적)와 반대.</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">현재분사구 (주어 수식)</div>
+          <div class="grammar-eng">"Humans, who have long viewed that time is (A), have continuously made modifications, <u>sticking to their belief</u> that..."</div>
+          <div class="grammar-ko">sticking to = 분사구문으로 "~을 고집하면서". 동격 that절 = belief의 내용.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">cement</div><div class="vocab-meaning">굳히다, 공고히 하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">psyche</div><div class="vocab-meaning">정신, 심리</div></div>
+          <div class="vocab-item"><div class="vocab-word">wobble</div><div class="vocab-meaning">흔들리다, 비틀거리다</div></div>
+          <div class="vocab-item"><div class="vocab-word">drag</div><div class="vocab-meaning">저항, 끌어당기는 힘</div></div>
+          <div class="vocab-item"><div class="vocab-word">yield</div><div class="vocab-meaning">굴복하다, 양보하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">El Niño</div><div class="vocab-meaning">엘니뇨 (태평양 기후 시스템)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q41-42 ============================== -->
+  <div class="q-block" id="q41">
+    <div class="q-header">
+      <div class="q-num">41–42</div>
+      <div class="q-type">장문 독해</div>
+      <div class="q-title">41. 제목 / 42. 문맥상 낱말의 쓰임 [3점]</div>
+    </div>
+    <div class="q-body">
+      <div class="passage-box">
+        When your hand is hanging at your side and then you lift it, opposing muscles on your upper arm shorten and lengthen ― contract and relax ― to bend the elbow. Biceps contract, and triceps relax. Reversing the motion, when you drop your hand back down, muscles (a) <span class="underline" style="text-decoration:underline;text-decoration-color:#aaa">reverse roles</span>. Triceps contract, and biceps relax. Lift your hand or drop it, and muscle shows what it is: a system of coordination, managed by orchestrated tension. As arms and legs rotate around joints, muscles activate and deactivate, contract and relax. All physical activity is (b) <span class="underline" style="text-decoration:underline;text-decoration-color:#aaa">paradoxical</span>, in this sense: Movement depends on what muscles don't do, as much as it depends on what they do. Both are necessary, each in its time ― and the same is true of each side of the pairs of concepts shaping how we talk of muscles.<br><br>
+        Start with nature versus nurture: Some people are stronger or more muscular than others; is the difference (c) <span class="underline" style="text-decoration:underline;text-decoration-color:#aaa">inborn</span>, or does it depend on what people do? To the latter question: What do you do? Do you have to lift weights, or is walking enough exercise? How should you do the exercise? Should you move fast or slowly? Lift heavy weights or lighter ones? Put like that, basic questions about muscle may sound like they have one right answer. Oppositions can polarize. But where muscle is concerned, (d) <span class="underline" style="text-decoration:underline;text-decoration-color:#aaa">few oppositions are true polarities</span>. Look closely, and most prove to be paradoxes. Born and made, heavy and light, fast and slow: Those opposites actually (e) <span class="underline" style="text-decoration:underline;text-decoration-color:var(--red)">exclude</span> each other.
+      </div>
+      <div class="translation-box">
+        팔이 옆에 늘어져 있다가 들어 올릴 때, 위팔의 반대 근육들이 팔꿈치를 구부리기 위해 수축하고 이완한다. 이두근이 수축하고 삼두근이 이완한다. 반대로 팔을 내릴 때 근육들은 (a)역할을 바꾼다. 삼두근이 수축하고 이두근이 이완한다. 팔을 들거나 내리든, 근육은 그것이 무엇인지 보여준다: 조율된 긴장으로 관리되는 협응 시스템. 팔다리가 관절 주변을 회전하면서 근육들이 활성화·비활성화, 수축·이완한다. 이런 의미에서 모든 신체 활동은 (b)역설적이다: 움직임은 근육이 하는 것만큼이나 하지 않는 것에 달려 있다. 둘 다 각자의 때에 필요하다.<br><br>
+        선천성 대 후천성부터 시작하자. 어떤 사람들은 다른 사람들보다 더 강하거나 근육질인데, 그 차이는 (c)타고난 것인가, 아니면 무엇을 하느냐에 달린 것인가? 기본적인 근육 관련 질문들은 하나의 정답이 있는 것처럼 들릴 수 있다. 대립은 양극화될 수 있다. 하지만 근육에 관해서는 (d)진정한 양극인 대립쌍이 거의 없다. 자세히 보면 대부분은 역설로 판명된다. 타고남과 만들어짐, 무거움과 가벼움, 빠름과 느림: 그 반대들은 실제로 서로를 (e)<span style="color:var(--red)">배제한다 (→ 필요로 한다/보완한다)</span>.
+      </div>
+
+      <div class="section">
+        <div class="section-label">41번 정답 — 글의 제목</div>
+        <div class="answer-block">
+          <div class="answer-num">③</div>
+          <div class="answer-text"><span class="choice-ko">Harmony of Contrasts: What We Don't Know About Muscles<br>(대조의 조화: 근육에 대해 우리가 모르는 것)</span></div>
+        </div>
+        <div class="evidence-tag">근거</div>
+        <div class="evidence-box">
+          • 이두근·삼두근은 반대 역할을 하며 함께 작동 → 대조의 조화<br>
+          • "most prove to be paradoxes" → 우리가 생각하는 반대 개념들이 사실 역설<br>
+          • "born and made, heavy and light, fast and slow" → 대립쌍들이 서로 보완
+        </div>
+        <div class="wrong-grid" style="margin-top:12px">
+          <div class="wrong-item"><span class="wrong-num">①</span><span style="color:#c0c8e0">근육 손실 방지 Dos&Don'ts — 방법론 글이 아님</span></div>
+          <div class="wrong-item"><span class="wrong-num">②</span><span style="color:#c0c8e0">한 운동을 꾸준히 하는 것이 더 좋은 이유 — 운동 방법 논문 아님</span></div>
+          <div class="wrong-item correct-mark"><span class="wrong-num">③</span><span style="color:var(--green)">정답</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span style="color:#c0c8e0">근육 회복의 체계적 단계 — 회복 단계 언급 없음</span></div>
+          <div class="wrong-item"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">모든 신체 부위의 공통 운동 패턴 — 글의 주제가 아님</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">42번 정답 — 문맥상 부적절한 것</div>
+        <div class="answer-block">
+          <div class="answer-num">⑤</div>
+          <div class="answer-text"><span class="choice-ko">(e) exclude → <strong>complement / need</strong><br>(서로 배제한다 → 서로 보완한다/필요로 한다)</span></div>
+        </div>
+        <div class="evidence-tag">오류 분석</div>
+        <div class="evidence-box">
+          글의 핵심: "few oppositions are true polarities... most prove to be <strong>paradoxes</strong>"<br>
+          → 반대처럼 보이는 개념들이 실제로는 역설 = <strong>서로 배제하지 않고 공존</strong><br>
+          "exclude each other" = "서로 배제한다" → 이 문장이 맞으면 앞 문장(역설)과 모순<br>
+          → <strong>exclude → complement(보완하다) / need each other(서로 필요로 하다)</strong>로 바꿔야 자연스러움
+        </div>
+        <div class="wrong-grid" style="margin-top:12px">
+          <div class="wrong-item neutral"><span class="wrong-num">(a)</span><span style="color:#c0c8e0">reverse roles — 팔 내릴 때 이두근↔삼두근 역할 바뀜 ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">(b)</span><span style="color:#c0c8e0">paradoxical — 하는 것만큼 안 하는 것도 중요 → 역설적 ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">(c)</span><span style="color:#c0c8e0">inborn — 선천적 vs 후천적 (nature vs nurture) ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">(d)</span><span style="color:#c0c8e0">few oppositions are true polarities — 진정한 양극이 거의 없다 → 역설이라는 결론과 일치 ✓</span></div>
+          <div class="wrong-item"><span class="wrong-num">(e)</span><span style="color:var(--red)">exclude → complement ← 정답. 역설 = 배제하지 않고 공존</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">contract</div><div class="vocab-meaning">수축하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">orchestrated</div><div class="vocab-meaning">조율된, 정교하게 조직된</div></div>
+          <div class="vocab-item"><div class="vocab-word">paradoxical</div><div class="vocab-meaning">역설적인</div></div>
+          <div class="vocab-item"><div class="vocab-word">polarize</div><div class="vocab-meaning">양극화하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">polarity</div><div class="vocab-meaning">양극성, 대립</div></div>
+          <div class="vocab-item"><div class="vocab-word">inborn</div><div class="vocab-meaning">타고난, 선천적인</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================== Q43-45 ============================== -->
+  <div class="q-block" id="q43">
+    <div class="q-header">
+      <div class="q-num">43–45</div>
+      <div class="q-type">장문 독해 (순서 / 지칭 / 내용 일치)</div>
+      <div class="q-title">43. 순서 / 44. 지칭 대상 / 45. 내용 불일치</div>
+    </div>
+    <div class="q-body">
+      <div class="order-block">
+        <div class="order-item">
+          <div class="order-label">(A) — 주어진 단락</div>
+          <div class="order-text">Jason stared at the banner across the high school gym wall: "Annual Charity Marathon ― Run for Sam." The slogan stirred something in him. Sam, a cheerful seven-year-old who loved to draw and dreamed of being an artist, had a rare heart condition. Sam wasn't just anyone — he was the little boy living next door that Jason had babysat every summer break. (a) He had played in the park and spent summer afternoons chasing ice cream trucks with Sam.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(B)</div>
+          <div class="order-text">When the whistle blew, Jason started strong, but since he hadn't run for so long, his energy faded quickly. Every step was a struggle, but he pushed forward, encouraged by the thought of how happy Sam would be. Finally, he crossed the finish line. As he was sitting to catch (b) his breath, Sam came over and handed him bottled water. He felt pride, relief, and gratitude. He finally finished ― for Sam.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(C)</div>
+          <div class="order-text">Jason did everything (c) he could to recover, following his doctor's advice. A day before registration deadline, his doctor said a 3-mile run would be fine. Jason signed up for the 3-mile beginner route, hoping to run for Sam. On marathon morning, Jason stood among the runners, heart pounding. In the crowd, Sam was holding a sign: "Thank you, Runners!" Jason smiled. (d) He was all the motivation needed.</div>
+        </div>
+        <div class="order-item">
+          <div class="order-label">(D)</div>
+          <div class="order-text">Seeing Sam's name on the banner made everything feel personal. Jason had always been the fastest runner in school, known among his friends as "The Speedster." But since his knee injury, he hadn't been able to run for quite a long time. Still, when Jason thought about Sam and the hope this marathon represented, he knew (e) he had to try.</div>
+        </div>
+      </div>
+      <div class="translation-box">
+        <strong>(A):</strong> Jason은 체육관 벽의 현수막을 응시했다: "연례 자선 마라톤 — Sam을 위해 달려라." 그 슬로건이 그의 마음을 요동치게 했다. 그림 그리기를 좋아하고 화가를 꿈꾸는 명랑한 일곱 살 Sam은 희귀한 심장 질환을 갖고 있었다. Sam은 평범한 아이가 아니었다 — 그는 Jason이 여름 방학마다 돌봤던 옆집 꼬마였다. (a) 그는 Sam과 공원에서 놀고 여름 오후를 아이스크림 트럭을 쫓아다니며 보냈다.<br><br>
+        <strong>(B):</strong> 출발 신호가 울리자 Jason은 힘차게 시작했지만, 오랫동안 뛰지 않아 에너지가 금방 소진되었다. 모든 걸음이 힘들었지만, Sam이 얼마나 기뻐할지 생각하며 앞으로 나아갔다. 마침내 결승선을 넘었다. (b) 숨을 고르며 앉아 있을 때 Sam이 다가와 생수를 건네주었다. 자부심, 안도감, 감사함을 느꼈다. 드디어 Sam을 위해 완주했다.<br><br>
+        <strong>(C):</strong> Jason은 의사의 조언을 따라 (c) 그가 할 수 있는 모든 것을 해서 회복하려 했다. 등록 마감 하루 전, 의사는 3마일 달리기가 괜찮을 것이라고 했다. Jason은 Sam을 위해 달리기를 바라며 3마일 초보자 코스에 등록했다. 마라톤 당일 아침, Jason은 러너들 사이에 서서 심장이 두근거렸다. 군중 속에서 Sam이 현수막을 들고 있었다: "감사합니다, 달리기 선수들!" Jason이 미소 지었다. (d) 그(=Sam)는 필요한 모든 동기 부여였다.<br><br>
+        <strong>(D):</strong> 현수막에서 Sam의 이름을 보자 모든 것이 개인적으로 느껴졌다. Jason은 항상 학교에서 가장 빠른 달리기 선수로 친구들 사이에서 "스피드스터"로 알려져 있었다. 하지만 무릎 부상 이후 꽤 오랫동안 뛸 수 없었다. 그럼에도, 이 마라톤이 대표하는 희망과 Sam을 생각했을 때, (e) 그는 시도해야 한다는 것을 알았다.
+      </div>
+
+      <div class="section">
+        <div class="section-label">43번 정답 — 글의 순서</div>
+        <div class="answer-block">
+          <div class="answer-num">⑤</div>
+          <div class="answer-text"><span class="choice-ko">(D) - (C) - (B)</span></div>
+        </div>
+        <div class="evidence-tag">순서 논리</div>
+        <div class="evidence-box">
+          (A): Sam과 Jason의 관계 소개, 현수막 발견<br>
+          → <strong>(D)</strong>: 현수막에서 Sam 이름 확인 → Jason의 과거(최고 달리기 선수), 현재(무릎 부상) → 그래도 참가 결심<br>
+          → <strong>(C)</strong>: 부상 회복 → 의사 허락 → 등록 → 마라톤 당일 아침 준비<br>
+          → <strong>(B)</strong>: 마라톤 실제 진행 → 힘들게 완주 → Sam이 물 건네줌 → 감사·안도
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">44번 정답 — 지칭 대상이 다른 것</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">(d) He — Sam을 가리킴 (나머지는 모두 Jason)</span></div>
+        </div>
+        <div class="evidence-tag">각 대명사 분석</div>
+        <div class="evidence-box">
+          (a) He — "He had played in the park... with Sam" → Jason이 Sam과 논 것 → <strong>Jason</strong><br>
+          (b) his — "catch his breath" → Jason이 숨 고름 → <strong>Jason</strong><br>
+          (c) he — "everything he could to recover" → Jason이 회복 → <strong>Jason</strong><br>
+          (d) He — "Sam was holding a sign... Jason smiled. <strong>He was all the motivation needed.</strong>"<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Sam이 동기 부여였다는 뜻 → <strong>Sam</strong> ← 나머지와 다름<br>
+          (e) he — "he knew he had to try" → Jason → <strong>Jason</strong>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">45번 정답 — 내용 불일치</div>
+        <div class="answer-block">
+          <div class="answer-num">④</div>
+          <div class="answer-text"><span class="choice-ko">Jason의 의사는 3마일 달리기가 위험할 것이라고 말했다. → <strong>틀림</strong></span></div>
+        </div>
+        <div class="evidence-tag">근거</div>
+        <div class="evidence-box">
+          본문: "his doctor said <strong>a 3-mile run would be fine</strong>."<br>
+          → 의사는 괜찮다(fine)고 했지 위험하다고 하지 않음
+        </div>
+        <div class="wrong-grid" style="margin-top:12px">
+          <div class="wrong-item neutral"><span class="wrong-num">①</span><span style="color:#c0c8e0">슬로건이 Jason의 마음을 요동치게 했다 — "The slogan stirred something in him" ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">②</span><span style="color:#c0c8e0">Jason은 여름 방학마다 Sam을 돌봤다 — "babysat every summer break" ✓</span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">③</span><span style="color:#c0c8e0">Sam이 생수를 건네줬다 — "Sam came over and handed him bottled water" ✓</span></div>
+          <div class="wrong-item"><span class="wrong-num">④</span><span style="color:var(--red)">의사가 위험하다고 했다 → 실제로 "would be fine"이라 했음 ✗ <strong>정답</strong></span></div>
+          <div class="wrong-item neutral"><span class="wrong-num">⑤</span><span style="color:#c0c8e0">Jason은 학교에서 가장 빠른 선수 — "always been the fastest runner in school" ✓</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">핵심 문법</div>
+        <div class="grammar-block">
+          <div class="grammar-title">관계대명사 목적격 (접촉절)</div>
+          <div class="grammar-eng">"the little boy living next door <u>that</u> Jason had babysat every summer break"</div>
+          <div class="grammar-ko">that = 관계대명사 목적격. "Jason이 여름 방학마다 돌봤던 꼬마"</div>
+        </div>
+        <div class="grammar-block">
+          <div class="grammar-title">분사구문 (이유/방법)</div>
+          <div class="grammar-eng">"he pushed forward, <u>encouraged by the thought of how happy Sam would be</u>"</div>
+          <div class="grammar-ko">수동 분사구문. "Sam이 얼마나 기뻐할지 생각에 격려받아서"</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">어려운 단어</div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><div class="vocab-word">stir</div><div class="vocab-meaning">휘젓다, (감정을) 요동치게 하다</div></div>
+          <div class="vocab-item"><div class="vocab-word">babysit</div><div class="vocab-meaning">아이를 돌보다</div></div>
+          <div class="vocab-item"><div class="vocab-word">fade</div><div class="vocab-meaning">서서히 사라지다, 소진되다</div></div>
+          <div class="vocab-item"><div class="vocab-word">gratitude</div><div class="vocab-meaning">감사, 감사함</div></div>
+          <div class="vocab-item"><div class="vocab-word">registration deadline</div><div class="vocab-meaning">등록 마감일</div></div>
+          <div class="vocab-item"><div class="vocab-word">speedster</div><div class="vocab-meaning">빠른 사람, 스피드스터</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
